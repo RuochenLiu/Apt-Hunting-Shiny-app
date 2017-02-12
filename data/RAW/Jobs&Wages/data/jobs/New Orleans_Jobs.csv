@@ -1,0 +1,474 @@
+RowID,Date,Year,Location,IndicatorName,IndicatorValue,IndicatorID
+"Shelby County, TN_511_2013",01/01/2013 12:00:00 AM,2013,"Shelby County, TN",Farm jobs,206,511
+"Wake County, NC_511_2013",01/01/2013 12:00:00 AM,2013,"Wake County, NC",Farm jobs,877,511
+"Hillsborough County, FL_511_2013",01/01/2013 12:00:00 AM,2013,"Hillsborough County, FL",Farm jobs,10145,511
+"Fulton County, GA_511_2013",01/01/2013 12:00:00 AM,2013,"Fulton County, GA",Farm jobs,205,511
+"Oklahoma County, OK_511_2013",01/01/2013 12:00:00 AM,2013,"Oklahoma County, OK",Farm jobs,158,511
+"Davidson County, TN_511_2013",01/01/2013 12:00:00 AM,2013,"Davidson County, TN",Farm jobs,300,511
+"Orleans Parish, LA_511_2013",01/01/2013 12:00:00 AM,2013,"Orleans Parish, LA",Farm jobs,66,511
+"Miami-Dade County, FL_511_2013",01/01/2013 12:00:00 AM,2013,"Miami-Dade County, FL",Farm jobs,7929,511
+"Jefferson County, KY_511_2013",01/01/2013 12:00:00 AM,2013,"Jefferson County, KY",Farm jobs,145,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"East Baton Rouge Parish, LA",Nonfarm jobs,263132,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2013",01/01/2013 12:00:00 AM,2013,"East Baton Rouge Parish, LA",Farm jobs,44,511
+Benchmark Average_Calculation: 010-511_2013,01/01/2013 12:00:00 AM,2013,Benchmark Average,Nonfarm jobs,504300,Calculation: 010-511
+Benchmark Average_511_2013,01/01/2013 12:00:00 AM,2013,Benchmark Average,Farm jobs,2008,511
+"Shelby County, TN_511_2012",01/01/2012 12:00:00 AM,2012,"Shelby County, TN",Farm jobs,256,511
+"Wake County, NC_511_2012",01/01/2012 12:00:00 AM,2012,"Wake County, NC",Farm jobs,790,511
+"Hillsborough County, FL_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Hillsborough County, FL",Nonfarm jobs,576217,Calculation: 010-511
+"Hillsborough County, FL_511_2012",01/01/2012 12:00:00 AM,2012,"Hillsborough County, FL",Farm jobs,9783,511
+"Fulton County, GA_511_2012",01/01/2012 12:00:00 AM,2012,"Fulton County, GA",Farm jobs,178,511
+"Oklahoma County, OK_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Oklahoma County, OK",Nonfarm jobs,429178,Calculation: 010-511
+"Oklahoma County, OK_511_2012",01/01/2012 12:00:00 AM,2012,"Oklahoma County, OK",Farm jobs,180,511
+"Davidson County, TN_511_2012",01/01/2012 12:00:00 AM,2012,"Davidson County, TN",Farm jobs,315,511
+"Orleans Parish, LA_511_2012",01/01/2012 12:00:00 AM,2012,"Orleans Parish, LA",Farm jobs,39,511
+"Miami-Dade County, FL_511_2012",01/01/2012 12:00:00 AM,2012,"Miami-Dade County, FL",Farm jobs,8163,511
+"Jefferson County, KY_511_2012",01/01/2012 12:00:00 AM,2012,"Jefferson County, KY",Farm jobs,156,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"East Baton Rouge Parish, LA",Nonfarm jobs,257966,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2012",01/01/2012 12:00:00 AM,2012,"East Baton Rouge Parish, LA",Farm jobs,47,511
+Benchmark Average_Calculation: 010-511_2012,01/01/2012 12:00:00 AM,2012,Benchmark Average,Nonfarm jobs,492454,Calculation: 010-511
+Benchmark Average_511_2012,01/01/2012 12:00:00 AM,2012,Benchmark Average,Farm jobs,1991,511
+"Shelby County, TN_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Shelby County, TN",Nonfarm jobs,464897,Calculation: 010-511
+"Shelby County, TN_511_2011",01/01/2011 12:00:00 AM,2011,"Shelby County, TN",Farm jobs,264,511
+"Wake County, NC_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Wake County, NC",Nonfarm jobs,441067,Calculation: 010-511
+"Wake County, NC_511_2011",01/01/2011 12:00:00 AM,2011,"Wake County, NC",Farm jobs,750,511
+"Hillsborough County, FL_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Hillsborough County, FL",Nonfarm jobs,561290,Calculation: 010-511
+"Hillsborough County, FL_511_2011",01/01/2011 12:00:00 AM,2011,"Hillsborough County, FL",Farm jobs,10462,511
+"Fulton County, GA_511_2011",01/01/2011 12:00:00 AM,2011,"Fulton County, GA",Farm jobs,159,511
+"Oklahoma County, OK_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Oklahoma County, OK",Nonfarm jobs,419616,Calculation: 010-511
+"Oklahoma County, OK_511_2011",01/01/2011 12:00:00 AM,2011,"Oklahoma County, OK",Farm jobs,218,511
+"Davidson County, TN_511_2011",01/01/2011 12:00:00 AM,2011,"Davidson County, TN",Farm jobs,295,511
+"Orleans Parish, LA_511_2011",01/01/2011 12:00:00 AM,2011,"Orleans Parish, LA",Farm jobs,32,511
+"Miami-Dade County, FL_511_2011",01/01/2011 12:00:00 AM,2011,"Miami-Dade County, FL",Farm jobs,8024,511
+"Jefferson County, KY_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Jefferson County, KY",Nonfarm jobs,412514,Calculation: 010-511
+"Jefferson County, KY_511_2011",01/01/2011 12:00:00 AM,2011,"Jefferson County, KY",Farm jobs,146,511
+"East Baton Rouge Parish, LA_511_2011",01/01/2011 12:00:00 AM,2011,"East Baton Rouge Parish, LA",Farm jobs,62,511
+Benchmark Average_511_2011,01/01/2011 12:00:00 AM,2011,Benchmark Average,Farm jobs,2041,511
+"Shelby County, TN_511_2010",01/01/2010 12:00:00 AM,2010,"Shelby County, TN",Farm jobs,270,511
+"Wake County, NC_511_2010",01/01/2010 12:00:00 AM,2010,"Wake County, NC",Farm jobs,771,511
+"Wake County, NC_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Wake County, NC",Nonfarm jobs,430164,Calculation: 010-511
+"Hillsborough County, FL_511_2010",01/01/2010 12:00:00 AM,2010,"Hillsborough County, FL",Farm jobs,11109,511
+"Fulton County, GA_511_2010",01/01/2010 12:00:00 AM,2010,"Fulton County, GA",Farm jobs,140,511
+"Oklahoma County, OK_511_2010",01/01/2010 12:00:00 AM,2010,"Oklahoma County, OK",Farm jobs,218,511
+"Davidson County, TN_511_2010",01/01/2010 12:00:00 AM,2010,"Davidson County, TN",Farm jobs,281,511
+"Orleans Parish, LA_511_2010",01/01/2010 12:00:00 AM,2010,"Orleans Parish, LA",Farm jobs,22,511
+"Miami-Dade County, FL_511_2010",01/01/2010 12:00:00 AM,2010,"Miami-Dade County, FL",Farm jobs,7885,511
+"Jefferson County, KY_511_2010",01/01/2010 12:00:00 AM,2010,"Jefferson County, KY",Farm jobs,153,511
+"Jefferson County, KY_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Jefferson County, KY",Nonfarm jobs,406975,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2010",01/01/2010 12:00:00 AM,2010,"East Baton Rouge Parish, LA",Farm jobs,64,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"East Baton Rouge Parish, LA",Nonfarm jobs,253066,Calculation: 010-511
+Benchmark Average_511_2010,01/01/2010 12:00:00 AM,2010,Benchmark Average,Farm jobs,2091,511
+"Shelby County, TN_511_2009",01/01/2009 12:00:00 AM,2009,"Shelby County, TN",Farm jobs,307,511
+"Wake County, NC_511_2009",01/01/2009 12:00:00 AM,2009,"Wake County, NC",Farm jobs,899,511
+"Wake County, NC_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Wake County, NC",Nonfarm jobs,431145,Calculation: 010-511
+"Hillsborough County, FL_511_2009",01/01/2009 12:00:00 AM,2009,"Hillsborough County, FL",Farm jobs,12170,511
+"Oklahoma County, OK_511_2009",01/01/2009 12:00:00 AM,2009,"Oklahoma County, OK",Farm jobs,213,511
+"Oklahoma County, OK_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Oklahoma County, OK",Nonfarm jobs,411202,Calculation: 010-511
+"Davidson County, TN_511_2009",01/01/2009 12:00:00 AM,2009,"Davidson County, TN",Farm jobs,261,511
+"Davidson County, TN_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Davidson County, TN",Nonfarm jobs,416358,Calculation: 010-511
+"Orleans Parish, LA_511_2009",01/01/2009 12:00:00 AM,2009,"Orleans Parish, LA",Farm jobs,26,511
+"Orleans Parish, LA_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Orleans Parish, LA",Nonfarm jobs,168496,Calculation: 010-511
+"Miami-Dade County, FL_511_2009",01/01/2009 12:00:00 AM,2009,"Miami-Dade County, FL",Farm jobs,8320,511
+"Jefferson County, KY_511_2009",01/01/2009 12:00:00 AM,2009,"Jefferson County, KY",Farm jobs,145,511
+"East Baton Rouge Parish, LA_511_2009",01/01/2009 12:00:00 AM,2009,"East Baton Rouge Parish, LA",Farm jobs,86,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"East Baton Rouge Parish, LA",Nonfarm jobs,259754,Calculation: 010-511
+"Shelby County, TN_511_2008",01/01/2008 12:00:00 AM,2008,"Shelby County, TN",Farm jobs,368,511
+"Shelby County, TN_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Shelby County, TN",Nonfarm jobs,499324,Calculation: 010-511
+"Wake County, NC_511_2008",01/01/2008 12:00:00 AM,2008,"Wake County, NC",Farm jobs,882,511
+"Hillsborough County, FL_511_2008",01/01/2008 12:00:00 AM,2008,"Hillsborough County, FL",Farm jobs,11748,511
+"Hillsborough County, FL_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Hillsborough County, FL",Nonfarm jobs,601104,Calculation: 010-511
+"Oklahoma County, OK_511_2008",01/01/2008 12:00:00 AM,2008,"Oklahoma County, OK",Farm jobs,236,511
+"Davidson County, TN_511_2008",01/01/2008 12:00:00 AM,2008,"Davidson County, TN",Farm jobs,243,511
+"Orleans Parish, LA_511_2008",01/01/2008 12:00:00 AM,2008,"Orleans Parish, LA",Farm jobs,58,511
+"Miami-Dade County, FL_511_2008",01/01/2008 12:00:00 AM,2008,"Miami-Dade County, FL",Farm jobs,8603,511
+"Jefferson County, KY_511_2008",01/01/2008 12:00:00 AM,2008,"Jefferson County, KY",Farm jobs,147,511
+"Jefferson County, KY_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Jefferson County, KY",Nonfarm jobs,426411,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2008",01/01/2008 12:00:00 AM,2008,"East Baton Rouge Parish, LA",Farm jobs,103,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"East Baton Rouge Parish, LA",Nonfarm jobs,261720,Calculation: 010-511
+"Shelby County, TN_511_2007",01/01/2007 12:00:00 AM,2007,"Shelby County, TN",Farm jobs,355,511
+"Wake County, NC_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Wake County, NC",Nonfarm jobs,447931,Calculation: 010-511
+"Wake County, NC_511_2007",01/01/2007 12:00:00 AM,2007,"Wake County, NC",Farm jobs,895,511
+"Hillsborough County, FL_511_2007",01/01/2007 12:00:00 AM,2007,"Hillsborough County, FL",Farm jobs,11640,511
+"Fulton County, GA_511_2007",01/01/2007 12:00:00 AM,2007,"Fulton County, GA",Farm jobs,189,511
+"Oklahoma County, OK_511_2007",01/01/2007 12:00:00 AM,2007,"Oklahoma County, OK",Farm jobs,247,511
+"Davidson County, TN_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Davidson County, TN",Nonfarm jobs,444112,Calculation: 010-511
+"Davidson County, TN_511_2007",01/01/2007 12:00:00 AM,2007,"Davidson County, TN",Farm jobs,239,511
+"Orleans Parish, LA_511_2007",01/01/2007 12:00:00 AM,2007,"Orleans Parish, LA",Farm jobs,60,511
+"Miami-Dade County, FL_511_2007",01/01/2007 12:00:00 AM,2007,"Miami-Dade County, FL",Farm jobs,9175,511
+"Jefferson County, KY_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Jefferson County, KY",Nonfarm jobs,432599,Calculation: 010-511
+"Jefferson County, KY_511_2007",01/01/2007 12:00:00 AM,2007,"Jefferson County, KY",Farm jobs,146,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"East Baton Rouge Parish, LA",Nonfarm jobs,262074,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2007",01/01/2007 12:00:00 AM,2007,"East Baton Rouge Parish, LA",Farm jobs,123,511
+Benchmark Average_511_2007,01/01/2007 12:00:00 AM,2007,Benchmark Average,Farm jobs,2307,511
+"Shelby County, TN_511_2006",01/01/2006 12:00:00 AM,2006,"Shelby County, TN",Farm jobs,366,511
+"Wake County, NC_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Wake County, NC",Nonfarm jobs,426579,Calculation: 010-511
+"Wake County, NC_511_2006",01/01/2006 12:00:00 AM,2006,"Wake County, NC",Farm jobs,797,511
+"Hillsborough County, FL_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Hillsborough County, FL",Nonfarm jobs,627585,Calculation: 010-511
+"Hillsborough County, FL_511_2006",01/01/2006 12:00:00 AM,2006,"Hillsborough County, FL",Farm jobs,11970,511
+"Fulton County, GA_511_2006",01/01/2006 12:00:00 AM,2006,"Fulton County, GA",Farm jobs,171,511
+"Oklahoma County, OK_511_2006",01/01/2006 12:00:00 AM,2006,"Oklahoma County, OK",Farm jobs,199,511
+"Davidson County, TN_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Davidson County, TN",Nonfarm jobs,446493,Calculation: 010-511
+"Davidson County, TN_511_2006",01/01/2006 12:00:00 AM,2006,"Davidson County, TN",Farm jobs,219,511
+"Orleans Parish, LA_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Orleans Parish, LA",Nonfarm jobs,151881,Calculation: 010-511
+"Orleans Parish, LA_511_2006",01/01/2006 12:00:00 AM,2006,"Orleans Parish, LA",Farm jobs,50,511
+"Miami-Dade County, FL_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Miami-Dade County, FL",Nonfarm jobs,998252,Calculation: 010-511
+"Miami-Dade County, FL_511_2006",01/01/2006 12:00:00 AM,2006,"Miami-Dade County, FL",Farm jobs,9335,511
+"Jefferson County, KY_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Jefferson County, KY",Nonfarm jobs,427368,Calculation: 010-511
+"Jefferson County, KY_511_2006",01/01/2006 12:00:00 AM,2006,"Jefferson County, KY",Farm jobs,151,511
+"East Baton Rouge Parish, LA_511_2006",01/01/2006 12:00:00 AM,2006,"East Baton Rouge Parish, LA",Farm jobs,123,511
+Benchmark Average_Calculation: 010-511_2006,01/01/2006 12:00:00 AM,2006,Benchmark Average,Nonfarm jobs,503763,Calculation: 010-511
+Benchmark Average_511_2006,01/01/2006 12:00:00 AM,2006,Benchmark Average,Farm jobs,2338,511
+"Shelby County, TN_511_2005",01/01/2005 12:00:00 AM,2005,"Shelby County, TN",Farm jobs,348,511
+"Shelby County, TN_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Shelby County, TN",Nonfarm jobs,498458,Calculation: 010-511
+"Wake County, NC_511_2005",01/01/2005 12:00:00 AM,2005,"Wake County, NC",Farm jobs,795,511
+"Hillsborough County, FL_511_2005",01/01/2005 12:00:00 AM,2005,"Hillsborough County, FL",Farm jobs,12697,511
+"Hillsborough County, FL_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Hillsborough County, FL",Nonfarm jobs,612747,Calculation: 010-511
+"Oklahoma County, OK_511_2005",01/01/2005 12:00:00 AM,2005,"Oklahoma County, OK",Farm jobs,145,511
+"Oklahoma County, OK_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Oklahoma County, OK",Nonfarm jobs,411441,Calculation: 010-511
+"Davidson County, TN_511_2005",01/01/2005 12:00:00 AM,2005,"Davidson County, TN",Farm jobs,210,511
+"Orleans Parish, LA_511_2005",01/01/2005 12:00:00 AM,2005,"Orleans Parish, LA",Farm jobs,52,511
+"Miami-Dade County, FL_511_2005",01/01/2005 12:00:00 AM,2005,"Miami-Dade County, FL",Farm jobs,8892,511
+"Jefferson County, KY_511_2005",01/01/2005 12:00:00 AM,2005,"Jefferson County, KY",Farm jobs,169,511
+"Jefferson County, KY_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Jefferson County, KY",Nonfarm jobs,421921,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2005",01/01/2005 12:00:00 AM,2005,"East Baton Rouge Parish, LA",Farm jobs,144,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"East Baton Rouge Parish, LA",Nonfarm jobs,251823,Calculation: 010-511
+"Shelby County, TN_511_2004",01/01/2004 12:00:00 AM,2004,"Shelby County, TN",Farm jobs,330,511
+"Wake County, NC_511_2004",01/01/2004 12:00:00 AM,2004,"Wake County, NC",Farm jobs,1068,511
+"Hillsborough County, FL_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Hillsborough County, FL",Nonfarm jobs,597173,Calculation: 010-511
+"Hillsborough County, FL_511_2004",01/01/2004 12:00:00 AM,2004,"Hillsborough County, FL",Farm jobs,12345,511
+"Oklahoma County, OK_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Oklahoma County, OK",Nonfarm jobs,404642,Calculation: 010-511
+"Oklahoma County, OK_511_2004",01/01/2004 12:00:00 AM,2004,"Oklahoma County, OK",Farm jobs,161,511
+"Davidson County, TN_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Davidson County, TN",Nonfarm jobs,428872,Calculation: 010-511
+"Davidson County, TN_511_2004",01/01/2004 12:00:00 AM,2004,"Davidson County, TN",Farm jobs,228,511
+"Orleans Parish, LA_511_2004",01/01/2004 12:00:00 AM,2004,"Orleans Parish, LA",Farm jobs,68,511
+"Miami-Dade County, FL_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Miami-Dade County, FL",Nonfarm jobs,971476,Calculation: 010-511
+"Miami-Dade County, FL_511_2004",01/01/2004 12:00:00 AM,2004,"Miami-Dade County, FL",Farm jobs,9235,511
+"Jefferson County, KY_511_2004",01/01/2004 12:00:00 AM,2004,"Jefferson County, KY",Farm jobs,154,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"East Baton Rouge Parish, LA",Nonfarm jobs,245630,Calculation: 010-511
+"East Baton Rouge Parish, LA_511_2004",01/01/2004 12:00:00 AM,2004,"East Baton Rouge Parish, LA",Farm jobs,152,511
+Benchmark Average_010_2004,01/01/2004 12:00:00 AM,2004,Benchmark Average,Total jobs,494741,010
+Benchmark Average_010_2005,01/01/2005 12:00:00 AM,2005,Benchmark Average,Total jobs,500620,010
+Benchmark Average_010_2006,01/01/2006 12:00:00 AM,2006,Benchmark Average,Total jobs,506101,010
+Benchmark Average_010_2007,01/01/2007 12:00:00 AM,2007,Benchmark Average,Total jobs,510121,010
+Benchmark Average_010_2008,01/01/2008 12:00:00 AM,2008,Benchmark Average,Total jobs,503335,010
+Benchmark Average_010_2009,01/01/2009 12:00:00 AM,2009,Benchmark Average,Total jobs,479155,010
+Benchmark Average_010_2010,01/01/2010 12:00:00 AM,2010,Benchmark Average,Total jobs,476739,010
+Benchmark Average_010_2011,01/01/2011 12:00:00 AM,2011,Benchmark Average,Total jobs,485467,010
+Benchmark Average_010_2012,01/01/2012 12:00:00 AM,2012,Benchmark Average,Total jobs,494445,010
+Benchmark Average_010_2013,01/01/2013 12:00:00 AM,2013,Benchmark Average,Total jobs,506307,010
+Benchmark Average_511_2004,01/01/2004 12:00:00 AM,2004,Benchmark Average,Farm jobs,2374,511
+Benchmark Average_511_2005,01/01/2005 12:00:00 AM,2005,Benchmark Average,Farm jobs,2345,511
+Benchmark Average_511_2008,01/01/2008 12:00:00 AM,2008,Benchmark Average,Farm jobs,2239,511
+Benchmark Average_511_2009,01/01/2009 12:00:00 AM,2009,Benchmark Average,Farm jobs,2243,511
+Benchmark Average_Calculation: 010-511_2004,01/01/2004 12:00:00 AM,2004,Benchmark Average,Nonfarm jobs,492367,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2005,01/01/2005 12:00:00 AM,2005,Benchmark Average,Nonfarm jobs,498274,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2007,01/01/2007 12:00:00 AM,2007,Benchmark Average,Nonfarm jobs,507814,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2008,01/01/2008 12:00:00 AM,2008,Benchmark Average,Nonfarm jobs,501096,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2009,01/01/2009 12:00:00 AM,2009,Benchmark Average,Nonfarm jobs,476913,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2010,01/01/2010 12:00:00 AM,2010,Benchmark Average,Nonfarm jobs,474648,Calculation: 010-511
+Benchmark Average_Calculation: 010-511_2011,01/01/2011 12:00:00 AM,2011,Benchmark Average,Nonfarm jobs,483426,Calculation: 010-511
+Benchmark Average_Calculation_2005,01/01/2005 12:00:00 AM,2005,Benchmark Average,Nonfarm job growth,0,Calculation
+Benchmark Average_Calculation_2006,01/01/2006 12:00:00 AM,2006,Benchmark Average,Nonfarm job growth,-1,Calculation
+Benchmark Average_Calculation_2007,01/01/2007 12:00:00 AM,2007,Benchmark Average,Nonfarm job growth,2,Calculation
+Benchmark Average_Calculation_2008,01/01/2008 12:00:00 AM,2008,Benchmark Average,Nonfarm job growth,-1,Calculation
+Benchmark Average_Calculation_2009,01/01/2009 12:00:00 AM,2009,Benchmark Average,Nonfarm job growth,-4,Calculation
+Benchmark Average_Calculation_2010,01/01/2010 12:00:00 AM,2010,Benchmark Average,Nonfarm job growth,-1,Calculation
+Benchmark Average_Calculation_2011,01/01/2011 12:00:00 AM,2011,Benchmark Average,Nonfarm job growth,2,Calculation
+Benchmark Average_Calculation_2012,01/01/2012 12:00:00 AM,2012,Benchmark Average,Nonfarm job growth,2,Calculation
+Benchmark Average_Calculation_2013,01/01/2013 12:00:00 AM,2013,Benchmark Average,Nonfarm job growth,2,Calculation
+"Davidson County, TN_010_2004",01/01/2004 12:00:00 AM,2004,"Davidson County, TN",Total jobs,429100,010
+"Davidson County, TN_010_2005",01/01/2005 12:00:00 AM,2005,"Davidson County, TN",Total jobs,438397,010
+"Davidson County, TN_010_2006",01/01/2006 12:00:00 AM,2006,"Davidson County, TN",Total jobs,446712,010
+"Davidson County, TN_010_2007",01/01/2007 12:00:00 AM,2007,"Davidson County, TN",Total jobs,444351,010
+"Davidson County, TN_010_2008",01/01/2008 12:00:00 AM,2008,"Davidson County, TN",Total jobs,437097,010
+"Davidson County, TN_010_2009",01/01/2009 12:00:00 AM,2009,"Davidson County, TN",Total jobs,416619,010
+"Davidson County, TN_010_2010",01/01/2010 12:00:00 AM,2010,"Davidson County, TN",Total jobs,416404,010
+"Davidson County, TN_010_2011",01/01/2011 12:00:00 AM,2011,"Davidson County, TN",Total jobs,421359,010
+"Davidson County, TN_010_2012",01/01/2012 12:00:00 AM,2012,"Davidson County, TN",Total jobs,430155,010
+"Davidson County, TN_010_2013",01/01/2013 12:00:00 AM,2013,"Davidson County, TN",Total jobs,438699,010
+"Davidson County, TN_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Davidson County, TN",Nonfarm jobs,438187,Calculation: 010-511
+"Davidson County, TN_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Davidson County, TN",Nonfarm jobs,436854,Calculation: 010-511
+"Davidson County, TN_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Davidson County, TN",Nonfarm jobs,416123,Calculation: 010-511
+"Davidson County, TN_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Davidson County, TN",Nonfarm jobs,421064,Calculation: 010-511
+"Davidson County, TN_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Davidson County, TN",Nonfarm jobs,429840,Calculation: 010-511
+"Davidson County, TN_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Davidson County, TN",Nonfarm jobs,438399,Calculation: 010-511
+"Davidson County, TN_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Davidson County, TN",Nonfarm job growth,2,Calculation
+"Davidson County, TN_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Davidson County, TN",Nonfarm job growth,2,Calculation
+"Davidson County, TN_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Davidson County, TN",Nonfarm job growth,-1,Calculation
+"Davidson County, TN_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Davidson County, TN",Nonfarm job growth,-2,Calculation
+"Davidson County, TN_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Davidson County, TN",Nonfarm job growth,-5,Calculation
+"Davidson County, TN_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Davidson County, TN",Nonfarm job growth,-0,Calculation
+"Davidson County, TN_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Davidson County, TN",Nonfarm job growth,1,Calculation
+"Davidson County, TN_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Davidson County, TN",Nonfarm job growth,2,Calculation
+"Davidson County, TN_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Davidson County, TN",Nonfarm job growth,2,Calculation
+"East Baton Rouge Parish, LA_010_2004",01/01/2004 12:00:00 AM,2004,"East Baton Rouge Parish, LA",Total jobs,245782,010
+"East Baton Rouge Parish, LA_010_2005",01/01/2005 12:00:00 AM,2005,"East Baton Rouge Parish, LA",Total jobs,251967,010
+"East Baton Rouge Parish, LA_010_2006",01/01/2006 12:00:00 AM,2006,"East Baton Rouge Parish, LA",Total jobs,258551,010
+"East Baton Rouge Parish, LA_010_2007",01/01/2007 12:00:00 AM,2007,"East Baton Rouge Parish, LA",Total jobs,262198,010
+"East Baton Rouge Parish, LA_010_2008",01/01/2008 12:00:00 AM,2008,"East Baton Rouge Parish, LA",Total jobs,261823,010
+"East Baton Rouge Parish, LA_010_2009",01/01/2009 12:00:00 AM,2009,"East Baton Rouge Parish, LA",Total jobs,259840,010
+"East Baton Rouge Parish, LA_010_2010",01/01/2010 12:00:00 AM,2010,"East Baton Rouge Parish, LA",Total jobs,253130,010
+"East Baton Rouge Parish, LA_010_2011",01/01/2011 12:00:00 AM,2011,"East Baton Rouge Parish, LA",Total jobs,254033,010
+"East Baton Rouge Parish, LA_010_2012",01/01/2012 12:00:00 AM,2012,"East Baton Rouge Parish, LA",Total jobs,258012,010
+"East Baton Rouge Parish, LA_010_2013",01/01/2013 12:00:00 AM,2013,"East Baton Rouge Parish, LA",Total jobs,263176,010
+"East Baton Rouge Parish, LA_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"East Baton Rouge Parish, LA",Nonfarm jobs,258428,Calculation: 010-511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"East Baton Rouge Parish, LA",Nonfarm jobs,253971,Calculation: 010-511
+"East Baton Rouge Parish, LA_Calculation_2005",01/01/2005 12:00:00 AM,2005,"East Baton Rouge Parish, LA",Nonfarm job growth,3,Calculation
+"East Baton Rouge Parish, LA_Calculation_2006",01/01/2006 12:00:00 AM,2006,"East Baton Rouge Parish, LA",Nonfarm job growth,3,Calculation
+"East Baton Rouge Parish, LA_Calculation_2007",01/01/2007 12:00:00 AM,2007,"East Baton Rouge Parish, LA",Nonfarm job growth,1,Calculation
+"East Baton Rouge Parish, LA_Calculation_2008",01/01/2008 12:00:00 AM,2008,"East Baton Rouge Parish, LA",Nonfarm job growth,-0,Calculation
+"East Baton Rouge Parish, LA_Calculation_2009",01/01/2009 12:00:00 AM,2009,"East Baton Rouge Parish, LA",Nonfarm job growth,-1,Calculation
+"East Baton Rouge Parish, LA_Calculation_2010",01/01/2010 12:00:00 AM,2010,"East Baton Rouge Parish, LA",Nonfarm job growth,-3,Calculation
+"East Baton Rouge Parish, LA_Calculation_2011",01/01/2011 12:00:00 AM,2011,"East Baton Rouge Parish, LA",Nonfarm job growth,0,Calculation
+"East Baton Rouge Parish, LA_Calculation_2012",01/01/2012 12:00:00 AM,2012,"East Baton Rouge Parish, LA",Nonfarm job growth,2,Calculation
+"East Baton Rouge Parish, LA_Calculation_2013",01/01/2013 12:00:00 AM,2013,"East Baton Rouge Parish, LA",Nonfarm job growth,2,Calculation
+"Fulton County, GA_010_2004",01/01/2004 12:00:00 AM,2004,"Fulton County, GA",Total jobs,727701,010
+"Fulton County, GA_010_2005",01/01/2005 12:00:00 AM,2005,"Fulton County, GA",Total jobs,741524,010
+"Fulton County, GA_010_2006",01/01/2006 12:00:00 AM,2006,"Fulton County, GA",Total jobs,774324,010
+"Fulton County, GA_010_2007",01/01/2007 12:00:00 AM,2007,"Fulton County, GA",Total jobs,758950,010
+"Fulton County, GA_010_2008",01/01/2008 12:00:00 AM,2008,"Fulton County, GA",Total jobs,741081,010
+"Fulton County, GA_010_2009",01/01/2009 12:00:00 AM,2009,"Fulton County, GA",Total jobs,698950,010
+"Fulton County, GA_010_2010",01/01/2010 12:00:00 AM,2010,"Fulton County, GA",Total jobs,704342,010
+"Fulton County, GA_010_2011",01/01/2011 12:00:00 AM,2011,"Fulton County, GA",Total jobs,724059,010
+"Fulton County, GA_010_2012",01/01/2012 12:00:00 AM,2012,"Fulton County, GA",Total jobs,721170,010
+"Fulton County, GA_010_2013",01/01/2013 12:00:00 AM,2013,"Fulton County, GA",Total jobs,745613,010
+"Fulton County, GA_511_2004",01/01/2004 12:00:00 AM,2004,"Fulton County, GA",Farm jobs,0,511
+"Fulton County, GA_511_2005",01/01/2005 12:00:00 AM,2005,"Fulton County, GA",Farm jobs,0,511
+"Fulton County, GA_511_2008",01/01/2008 12:00:00 AM,2008,"Fulton County, GA",Farm jobs,0,511
+"Fulton County, GA_511_2009",01/01/2009 12:00:00 AM,2009,"Fulton County, GA",Farm jobs,0,511
+"Fulton County, GA_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Fulton County, GA",Nonfarm jobs,727701,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Fulton County, GA",Nonfarm jobs,741524,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Fulton County, GA",Nonfarm jobs,774153,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Fulton County, GA",Nonfarm jobs,758761,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Fulton County, GA",Nonfarm jobs,741081,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Fulton County, GA",Nonfarm jobs,698950,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Fulton County, GA",Nonfarm jobs,704202,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Fulton County, GA",Nonfarm jobs,723900,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Fulton County, GA",Nonfarm jobs,720992,Calculation: 010-511
+"Fulton County, GA_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Fulton County, GA",Nonfarm jobs,745408,Calculation: 010-511
+"Fulton County, GA_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Fulton County, GA",Nonfarm job growth,2,Calculation
+"Fulton County, GA_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Fulton County, GA",Nonfarm job growth,4,Calculation
+"Fulton County, GA_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Fulton County, GA",Nonfarm job growth,-2,Calculation
+"Fulton County, GA_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Fulton County, GA",Nonfarm job growth,-2,Calculation
+"Fulton County, GA_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Fulton County, GA",Nonfarm job growth,-6,Calculation
+"Fulton County, GA_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Fulton County, GA",Nonfarm job growth,1,Calculation
+"Fulton County, GA_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Fulton County, GA",Nonfarm job growth,3,Calculation
+"Fulton County, GA_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Fulton County, GA",Nonfarm job growth,-0,Calculation
+"Fulton County, GA_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Fulton County, GA",Nonfarm job growth,3,Calculation
+"Hillsborough County, FL_010_2004",01/01/2004 12:00:00 AM,2004,"Hillsborough County, FL",Total jobs,609518,010
+"Hillsborough County, FL_010_2005",01/01/2005 12:00:00 AM,2005,"Hillsborough County, FL",Total jobs,625444,010
+"Hillsborough County, FL_010_2006",01/01/2006 12:00:00 AM,2006,"Hillsborough County, FL",Total jobs,639555,010
+"Hillsborough County, FL_010_2007",01/01/2007 12:00:00 AM,2007,"Hillsborough County, FL",Total jobs,646102,010
+"Hillsborough County, FL_010_2008",01/01/2008 12:00:00 AM,2008,"Hillsborough County, FL",Total jobs,612852,010
+"Hillsborough County, FL_010_2009",01/01/2009 12:00:00 AM,2009,"Hillsborough County, FL",Total jobs,572175,010
+"Hillsborough County, FL_010_2010",01/01/2010 12:00:00 AM,2010,"Hillsborough County, FL",Total jobs,563292,010
+"Hillsborough County, FL_010_2011",01/01/2011 12:00:00 AM,2011,"Hillsborough County, FL",Total jobs,571752,010
+"Hillsborough County, FL_010_2012",01/01/2012 12:00:00 AM,2012,"Hillsborough County, FL",Total jobs,586000,010
+"Hillsborough County, FL_010_2013",01/01/2013 12:00:00 AM,2013,"Hillsborough County, FL",Total jobs,603691,010
+"Hillsborough County, FL_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Hillsborough County, FL",Nonfarm jobs,634462,Calculation: 010-511
+"Hillsborough County, FL_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Hillsborough County, FL",Nonfarm jobs,560005,Calculation: 010-511
+"Hillsborough County, FL_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Hillsborough County, FL",Nonfarm jobs,552183,Calculation: 010-511
+"Hillsborough County, FL_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Hillsborough County, FL",Nonfarm jobs,593546,Calculation: 010-511
+"Hillsborough County, FL_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Hillsborough County, FL",Nonfarm job growth,3,Calculation
+"Hillsborough County, FL_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Hillsborough County, FL",Nonfarm job growth,2,Calculation
+"Hillsborough County, FL_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Hillsborough County, FL",Nonfarm job growth,1,Calculation
+"Hillsborough County, FL_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Hillsborough County, FL",Nonfarm job growth,-5,Calculation
+"Hillsborough County, FL_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Hillsborough County, FL",Nonfarm job growth,-7,Calculation
+"Hillsborough County, FL_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Hillsborough County, FL",Nonfarm job growth,-1,Calculation
+"Hillsborough County, FL_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Hillsborough County, FL",Nonfarm job growth,2,Calculation
+"Hillsborough County, FL_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Hillsborough County, FL",Nonfarm job growth,3,Calculation
+"Hillsborough County, FL_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Hillsborough County, FL",Nonfarm job growth,3,Calculation
+"Jefferson County, KY_010_2004",01/01/2004 12:00:00 AM,2004,"Jefferson County, KY",Total jobs,416405,010
+"Jefferson County, KY_010_2005",01/01/2005 12:00:00 AM,2005,"Jefferson County, KY",Total jobs,422090,010
+"Jefferson County, KY_010_2006",01/01/2006 12:00:00 AM,2006,"Jefferson County, KY",Total jobs,427519,010
+"Jefferson County, KY_010_2007",01/01/2007 12:00:00 AM,2007,"Jefferson County, KY",Total jobs,432745,010
+"Jefferson County, KY_010_2008",01/01/2008 12:00:00 AM,2008,"Jefferson County, KY",Total jobs,426558,010
+"Jefferson County, KY_010_2009",01/01/2009 12:00:00 AM,2009,"Jefferson County, KY",Total jobs,408057,010
+"Jefferson County, KY_010_2010",01/01/2010 12:00:00 AM,2010,"Jefferson County, KY",Total jobs,407128,010
+"Jefferson County, KY_010_2011",01/01/2011 12:00:00 AM,2011,"Jefferson County, KY",Total jobs,412660,010
+"Jefferson County, KY_010_2012",01/01/2012 12:00:00 AM,2012,"Jefferson County, KY",Total jobs,423682,010
+"Jefferson County, KY_010_2013",01/01/2013 12:00:00 AM,2013,"Jefferson County, KY",Total jobs,431225,010
+"Jefferson County, KY_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Jefferson County, KY",Nonfarm jobs,416251,Calculation: 010-511
+"Jefferson County, KY_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Jefferson County, KY",Nonfarm jobs,407912,Calculation: 010-511
+"Jefferson County, KY_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Jefferson County, KY",Nonfarm jobs,423526,Calculation: 010-511
+"Jefferson County, KY_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Jefferson County, KY",Nonfarm jobs,431080,Calculation: 010-511
+"Jefferson County, KY_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Jefferson County, KY",Nonfarm job growth,1,Calculation
+"Jefferson County, KY_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Jefferson County, KY",Nonfarm job growth,1,Calculation
+"Jefferson County, KY_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Jefferson County, KY",Nonfarm job growth,1,Calculation
+"Jefferson County, KY_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Jefferson County, KY",Nonfarm job growth,-1,Calculation
+"Jefferson County, KY_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Jefferson County, KY",Nonfarm job growth,-4,Calculation
+"Jefferson County, KY_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Jefferson County, KY",Nonfarm job growth,-0,Calculation
+"Jefferson County, KY_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Jefferson County, KY",Nonfarm job growth,1,Calculation
+"Jefferson County, KY_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Jefferson County, KY",Nonfarm job growth,3,Calculation
+"Jefferson County, KY_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Jefferson County, KY",Nonfarm job growth,2,Calculation
+"Miami-Dade County, FL_010_2004",01/01/2004 12:00:00 AM,2004,"Miami-Dade County, FL",Total jobs,980711,010
+"Miami-Dade County, FL_010_2005",01/01/2005 12:00:00 AM,2005,"Miami-Dade County, FL",Total jobs,998241,010
+"Miami-Dade County, FL_010_2006",01/01/2006 12:00:00 AM,2006,"Miami-Dade County, FL",Total jobs,1007587,010
+"Miami-Dade County, FL_010_2007",01/01/2007 12:00:00 AM,2007,"Miami-Dade County, FL",Total jobs,1014998,010
+"Miami-Dade County, FL_010_2008",01/01/2008 12:00:00 AM,2008,"Miami-Dade County, FL",Total jobs,1006416,010
+"Miami-Dade County, FL_010_2009",01/01/2009 12:00:00 AM,2009,"Miami-Dade County, FL",Total jobs,950977,010
+"Miami-Dade County, FL_010_2010",01/01/2010 12:00:00 AM,2010,"Miami-Dade County, FL",Total jobs,947091,010
+"Miami-Dade County, FL_010_2011",01/01/2011 12:00:00 AM,2011,"Miami-Dade County, FL",Total jobs,970129,010
+"Miami-Dade County, FL_010_2012",01/01/2012 12:00:00 AM,2012,"Miami-Dade County, FL",Total jobs,992676,010
+"Miami-Dade County, FL_010_2013",01/01/2013 12:00:00 AM,2013,"Miami-Dade County, FL",Total jobs,1017400,010
+"Miami-Dade County, FL_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Miami-Dade County, FL",Nonfarm jobs,989349,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Miami-Dade County, FL",Nonfarm jobs,1005823,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Miami-Dade County, FL",Nonfarm jobs,997813,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Miami-Dade County, FL",Nonfarm jobs,942657,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Miami-Dade County, FL",Nonfarm jobs,939206,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Miami-Dade County, FL",Nonfarm jobs,962105,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Miami-Dade County, FL",Nonfarm jobs,984513,Calculation: 010-511
+"Miami-Dade County, FL_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Miami-Dade County, FL",Nonfarm jobs,1009471,Calculation: 010-511
+"Miami-Dade County, FL_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Miami-Dade County, FL",Nonfarm job growth,2,Calculation
+"Miami-Dade County, FL_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Miami-Dade County, FL",Nonfarm job growth,1,Calculation
+"Miami-Dade County, FL_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Miami-Dade County, FL",Nonfarm job growth,1,Calculation
+"Miami-Dade County, FL_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Miami-Dade County, FL",Nonfarm job growth,-1,Calculation
+"Miami-Dade County, FL_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Miami-Dade County, FL",Nonfarm job growth,-6,Calculation
+"Miami-Dade County, FL_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Miami-Dade County, FL",Nonfarm job growth,-0,Calculation
+"Miami-Dade County, FL_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Miami-Dade County, FL",Nonfarm job growth,2,Calculation
+"Miami-Dade County, FL_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Miami-Dade County, FL",Nonfarm job growth,2,Calculation
+"Miami-Dade County, FL_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Miami-Dade County, FL",Nonfarm job growth,3,Calculation
+"Oklahoma County, OK_010_2004",01/01/2004 12:00:00 AM,2004,"Oklahoma County, OK",Total jobs,404803,010
+"Oklahoma County, OK_010_2005",01/01/2005 12:00:00 AM,2005,"Oklahoma County, OK",Total jobs,411586,010
+"Oklahoma County, OK_010_2006",01/01/2006 12:00:00 AM,2006,"Oklahoma County, OK",Total jobs,420297,010
+"Oklahoma County, OK_010_2007",01/01/2007 12:00:00 AM,2007,"Oklahoma County, OK",Total jobs,420315,010
+"Oklahoma County, OK_010_2008",01/01/2008 12:00:00 AM,2008,"Oklahoma County, OK",Total jobs,424378,010
+"Oklahoma County, OK_010_2009",01/01/2009 12:00:00 AM,2009,"Oklahoma County, OK",Total jobs,411415,010
+"Oklahoma County, OK_010_2010",01/01/2010 12:00:00 AM,2010,"Oklahoma County, OK",Total jobs,409747,010
+"Oklahoma County, OK_010_2011",01/01/2011 12:00:00 AM,2011,"Oklahoma County, OK",Total jobs,419834,010
+"Oklahoma County, OK_010_2012",01/01/2012 12:00:00 AM,2012,"Oklahoma County, OK",Total jobs,429358,010
+"Oklahoma County, OK_010_2013",01/01/2013 12:00:00 AM,2013,"Oklahoma County, OK",Total jobs,436243,010
+"Oklahoma County, OK_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Oklahoma County, OK",Nonfarm jobs,420098,Calculation: 010-511
+"Oklahoma County, OK_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Oklahoma County, OK",Nonfarm jobs,420068,Calculation: 010-511
+"Oklahoma County, OK_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Oklahoma County, OK",Nonfarm jobs,424142,Calculation: 010-511
+"Oklahoma County, OK_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Oklahoma County, OK",Nonfarm jobs,409529,Calculation: 010-511
+"Oklahoma County, OK_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Oklahoma County, OK",Nonfarm jobs,436085,Calculation: 010-511
+"Oklahoma County, OK_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Oklahoma County, OK",Nonfarm job growth,2,Calculation
+"Oklahoma County, OK_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Oklahoma County, OK",Nonfarm job growth,2,Calculation
+"Oklahoma County, OK_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Oklahoma County, OK",Nonfarm job growth,-0,Calculation
+Benchmark Average_010_2014,01/01/2014 12:00:00 AM,2014,Benchmark Average,Total jobs,519337,010
+Benchmark Average_511_2014,01/01/2014 12:00:00 AM,2014,Benchmark Average,Farm jobs,2056,511
+Benchmark Average_Calculation: 010-511_2014,01/01/2014 12:00:00 AM,2014,Benchmark Average,Nonfarm jobs,517281,Calculation: 010-511
+Benchmark Average_Calculation_2014,01/01/2014 12:00:00 AM,2014,Benchmark Average,Nonfarm job growth,3,Calculation
+"Davidson County, TN_010_2014",01/01/2014 12:00:00 AM,2014,"Davidson County, TN",Total jobs,454831,010
+"Davidson County, TN_511_2014",01/01/2014 12:00:00 AM,2014,"Davidson County, TN",Farm jobs,230,511
+"Davidson County, TN_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Davidson County, TN",Nonfarm jobs,454601,Calculation: 010-511
+"Davidson County, TN_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Davidson County, TN",Nonfarm job growth,4,Calculation
+"East Baton Rouge Parish, LA_010_2014",01/01/2014 12:00:00 AM,2014,"East Baton Rouge Parish, LA",Total jobs,268466,010
+"East Baton Rouge Parish, LA_511_2014",01/01/2014 12:00:00 AM,2014,"East Baton Rouge Parish, LA",Farm jobs,47,511
+"East Baton Rouge Parish, LA_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"East Baton Rouge Parish, LA",Nonfarm jobs,268419,Calculation: 010-511
+"East Baton Rouge Parish, LA_Calculation_2014",01/01/2014 12:00:00 AM,2014,"East Baton Rouge Parish, LA",Nonfarm job growth,2,Calculation
+"Fulton County, GA_010_2014",01/01/2014 12:00:00 AM,2014,"Fulton County, GA",Total jobs,766233,010
+"Fulton County, GA_511_2014",01/01/2014 12:00:00 AM,2014,"Fulton County, GA",Farm jobs,215,511
+"Fulton County, GA_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Fulton County, GA",Nonfarm jobs,766018,Calculation: 010-511
+"Fulton County, GA_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Fulton County, GA",Nonfarm job growth,3,Calculation
+"Hillsborough County, FL_010_2014",01/01/2014 12:00:00 AM,2014,"Hillsborough County, FL",Total jobs,620402,010
+"Oklahoma County, OK_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Oklahoma County, OK",Nonfarm job growth,1,Calculation
+"Oklahoma County, OK_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Oklahoma County, OK",Nonfarm job growth,-3,Calculation
+"Oklahoma County, OK_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Oklahoma County, OK",Nonfarm job growth,-0,Calculation
+"Oklahoma County, OK_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Oklahoma County, OK",Nonfarm job growth,2,Calculation
+"Oklahoma County, OK_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Oklahoma County, OK",Nonfarm job growth,2,Calculation
+"Oklahoma County, OK_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Oklahoma County, OK",Nonfarm job growth,2,Calculation
+"Orleans Parish, LA_010_2004",01/01/2004 12:00:00 AM,2004,"Orleans Parish, LA",Total jobs,247260,010
+"Orleans Parish, LA_010_2005",01/01/2005 12:00:00 AM,2005,"Orleans Parish, LA",Total jobs,212453,010
+"Orleans Parish, LA_010_2006",01/01/2006 12:00:00 AM,2006,"Orleans Parish, LA",Total jobs,151931,010
+"Orleans Parish, LA_010_2007",01/01/2007 12:00:00 AM,2007,"Orleans Parish, LA",Total jobs,165383,010
+"Orleans Parish, LA_010_2008",01/01/2008 12:00:00 AM,2008,"Orleans Parish, LA",Total jobs,172044,010
+"Orleans Parish, LA_010_2009",01/01/2009 12:00:00 AM,2009,"Orleans Parish, LA",Total jobs,168522,010
+"Orleans Parish, LA_010_2010",01/01/2010 12:00:00 AM,2010,"Orleans Parish, LA",Total jobs,170343,010
+"Orleans Parish, LA_010_2011",01/01/2011 12:00:00 AM,2011,"Orleans Parish, LA",Total jobs,173865,010
+"Orleans Parish, LA_010_2012",01/01/2012 12:00:00 AM,2012,"Orleans Parish, LA",Total jobs,177032,010
+"Orleans Parish, LA_010_2013",01/01/2013 12:00:00 AM,2013,"Orleans Parish, LA",Total jobs,180368,010
+"Orleans Parish, LA_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Orleans Parish, LA",Nonfarm jobs,247192,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Orleans Parish, LA",Nonfarm jobs,212401,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Orleans Parish, LA",Nonfarm jobs,165323,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Orleans Parish, LA",Nonfarm jobs,171986,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Orleans Parish, LA",Nonfarm jobs,170321,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2011",01/01/2011 12:00:00 AM,2011,"Orleans Parish, LA",Nonfarm jobs,173833,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Orleans Parish, LA",Nonfarm jobs,176993,Calculation: 010-511
+"Orleans Parish, LA_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Orleans Parish, LA",Nonfarm jobs,180302,Calculation: 010-511
+"Orleans Parish, LA_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Orleans Parish, LA",Nonfarm job growth,-14,Calculation
+"Orleans Parish, LA_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Orleans Parish, LA",Nonfarm job growth,-28,Calculation
+"Orleans Parish, LA_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Orleans Parish, LA",Nonfarm job growth,9,Calculation
+"Orleans Parish, LA_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Orleans Parish, LA",Nonfarm job growth,4,Calculation
+"Orleans Parish, LA_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Orleans Parish, LA",Nonfarm job growth,-2,Calculation
+"Orleans Parish, LA_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Orleans Parish, LA",Nonfarm job growth,1,Calculation
+"Orleans Parish, LA_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Orleans Parish, LA",Nonfarm job growth,2,Calculation
+"Orleans Parish, LA_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Orleans Parish, LA",Nonfarm job growth,2,Calculation
+"Orleans Parish, LA_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Orleans Parish, LA",Nonfarm job growth,2,Calculation
+"Shelby County, TN_010_2004",01/01/2004 12:00:00 AM,2004,"Shelby County, TN",Total jobs,495719,010
+"Shelby County, TN_010_2005",01/01/2005 12:00:00 AM,2005,"Shelby County, TN",Total jobs,498806,010
+"Shelby County, TN_010_2006",01/01/2006 12:00:00 AM,2006,"Shelby County, TN",Total jobs,507156,010
+"Shelby County, TN_010_2007",01/01/2007 12:00:00 AM,2007,"Shelby County, TN",Total jobs,507343,010
+"Shelby County, TN_010_2008",01/01/2008 12:00:00 AM,2008,"Shelby County, TN",Total jobs,499692,010
+"Shelby County, TN_010_2009",01/01/2009 12:00:00 AM,2009,"Shelby County, TN",Total jobs,472955,010
+"Shelby County, TN_010_2010",01/01/2010 12:00:00 AM,2010,"Shelby County, TN",Total jobs,464982,010
+"Shelby County, TN_010_2011",01/01/2011 12:00:00 AM,2011,"Shelby County, TN",Total jobs,465161,010
+"Shelby County, TN_010_2012",01/01/2012 12:00:00 AM,2012,"Shelby County, TN",Total jobs,470322,010
+"Shelby County, TN_010_2013",01/01/2013 12:00:00 AM,2013,"Shelby County, TN",Total jobs,472804,010
+"Shelby County, TN_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Shelby County, TN",Nonfarm jobs,495389,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2006",01/01/2006 12:00:00 AM,2006,"Shelby County, TN",Nonfarm jobs,506790,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2007",01/01/2007 12:00:00 AM,2007,"Shelby County, TN",Nonfarm jobs,506988,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2009",01/01/2009 12:00:00 AM,2009,"Shelby County, TN",Nonfarm jobs,472648,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2010",01/01/2010 12:00:00 AM,2010,"Shelby County, TN",Nonfarm jobs,464712,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Shelby County, TN",Nonfarm jobs,470066,Calculation: 010-511
+"Shelby County, TN_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Shelby County, TN",Nonfarm jobs,472598,Calculation: 010-511
+"Shelby County, TN_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Shelby County, TN",Nonfarm job growth,1,Calculation
+"Shelby County, TN_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Shelby County, TN",Nonfarm job growth,2,Calculation
+"Shelby County, TN_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Shelby County, TN",Nonfarm job growth,0,Calculation
+"Shelby County, TN_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Shelby County, TN",Nonfarm job growth,-2,Calculation
+"Shelby County, TN_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Shelby County, TN",Nonfarm job growth,-5,Calculation
+"Shelby County, TN_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Shelby County, TN",Nonfarm job growth,-2,Calculation
+"Shelby County, TN_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Shelby County, TN",Nonfarm job growth,0,Calculation
+"Shelby County, TN_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Shelby County, TN",Nonfarm job growth,1,Calculation
+"Shelby County, TN_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Shelby County, TN",Nonfarm job growth,1,Calculation
+"Wake County, NC_010_2004",01/01/2004 12:00:00 AM,2004,"Wake County, NC",Total jobs,390410,010
+"Wake County, NC_010_2005",01/01/2005 12:00:00 AM,2005,"Wake County, NC",Total jobs,405689,010
+"Wake County, NC_010_2006",01/01/2006 12:00:00 AM,2006,"Wake County, NC",Total jobs,427376,010
+"Wake County, NC_010_2007",01/01/2007 12:00:00 AM,2007,"Wake County, NC",Total jobs,448826,010
+"Wake County, NC_010_2008",01/01/2008 12:00:00 AM,2008,"Wake County, NC",Total jobs,451404,010
+"Wake County, NC_010_2009",01/01/2009 12:00:00 AM,2009,"Wake County, NC",Total jobs,432044,010
+"Wake County, NC_010_2010",01/01/2010 12:00:00 AM,2010,"Wake County, NC",Total jobs,430935,010
+"Wake County, NC_010_2011",01/01/2011 12:00:00 AM,2011,"Wake County, NC",Total jobs,441817,010
+"Wake County, NC_010_2012",01/01/2012 12:00:00 AM,2012,"Wake County, NC",Total jobs,456044,010
+"Wake County, NC_010_2013",01/01/2013 12:00:00 AM,2013,"Wake County, NC",Total jobs,473854,010
+"Wake County, NC_Calculation: 010-511_2004",01/01/2004 12:00:00 AM,2004,"Wake County, NC",Nonfarm jobs,389342,Calculation: 010-511
+"Wake County, NC_Calculation: 010-511_2005",01/01/2005 12:00:00 AM,2005,"Wake County, NC",Nonfarm jobs,404894,Calculation: 010-511
+"Wake County, NC_Calculation: 010-511_2008",01/01/2008 12:00:00 AM,2008,"Wake County, NC",Nonfarm jobs,450522,Calculation: 010-511
+"Wake County, NC_Calculation: 010-511_2012",01/01/2012 12:00:00 AM,2012,"Wake County, NC",Nonfarm jobs,455254,Calculation: 010-511
+"Wake County, NC_Calculation: 010-511_2013",01/01/2013 12:00:00 AM,2013,"Wake County, NC",Nonfarm jobs,472977,Calculation: 010-511
+"Wake County, NC_Calculation_2005",01/01/2005 12:00:00 AM,2005,"Wake County, NC",Nonfarm job growth,4,Calculation
+"Wake County, NC_Calculation_2006",01/01/2006 12:00:00 AM,2006,"Wake County, NC",Nonfarm job growth,5,Calculation
+"Wake County, NC_Calculation_2007",01/01/2007 12:00:00 AM,2007,"Wake County, NC",Nonfarm job growth,5,Calculation
+"Wake County, NC_Calculation_2008",01/01/2008 12:00:00 AM,2008,"Wake County, NC",Nonfarm job growth,1,Calculation
+"Wake County, NC_Calculation_2009",01/01/2009 12:00:00 AM,2009,"Wake County, NC",Nonfarm job growth,-4,Calculation
+"Wake County, NC_Calculation_2010",01/01/2010 12:00:00 AM,2010,"Wake County, NC",Nonfarm job growth,-0,Calculation
+"Wake County, NC_Calculation_2011",01/01/2011 12:00:00 AM,2011,"Wake County, NC",Nonfarm job growth,3,Calculation
+"Wake County, NC_Calculation_2012",01/01/2012 12:00:00 AM,2012,"Wake County, NC",Nonfarm job growth,3,Calculation
+"Wake County, NC_Calculation_2013",01/01/2013 12:00:00 AM,2013,"Wake County, NC",Nonfarm job growth,4,Calculation
+"Hillsborough County, FL_511_2014",01/01/2014 12:00:00 AM,2014,"Hillsborough County, FL",Farm jobs,10402,511
+"Hillsborough County, FL_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Hillsborough County, FL",Nonfarm jobs,610000,Calculation: 010-511
+"Hillsborough County, FL_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Hillsborough County, FL",Nonfarm job growth,3,Calculation
+"Jefferson County, KY_010_2014",01/01/2014 12:00:00 AM,2014,"Jefferson County, KY",Total jobs,440249,010
+"Jefferson County, KY_511_2014",01/01/2014 12:00:00 AM,2014,"Jefferson County, KY",Farm jobs,120,511
+"Jefferson County, KY_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Jefferson County, KY",Nonfarm jobs,440129,Calculation: 010-511
+"Jefferson County, KY_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Jefferson County, KY",Nonfarm job growth,2,Calculation
+"Miami-Dade County, FL_010_2014",01/01/2014 12:00:00 AM,2014,"Miami-Dade County, FL",Total jobs,1046237,010
+"Miami-Dade County, FL_511_2014",01/01/2014 12:00:00 AM,2014,"Miami-Dade County, FL",Farm jobs,8249,511
+"Miami-Dade County, FL_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Miami-Dade County, FL",Nonfarm jobs,1037988,Calculation: 010-511
+"Miami-Dade County, FL_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Miami-Dade County, FL",Nonfarm job growth,3,Calculation
+"Oklahoma County, OK_010_2014",01/01/2014 12:00:00 AM,2014,"Oklahoma County, OK",Total jobs,442648,010
+"Oklahoma County, OK_511_2014",01/01/2014 12:00:00 AM,2014,"Oklahoma County, OK",Farm jobs,162,511
+"Oklahoma County, OK_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Oklahoma County, OK",Nonfarm jobs,442486,Calculation: 010-511
+"Oklahoma County, OK_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Oklahoma County, OK",Nonfarm job growth,1,Calculation
+"Orleans Parish, LA_010_2014",01/01/2014 12:00:00 AM,2014,"Orleans Parish, LA",Total jobs,187554,010
+"Orleans Parish, LA_511_2014",01/01/2014 12:00:00 AM,2014,"Orleans Parish, LA",Farm jobs,70,511
+"Orleans Parish, LA_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Orleans Parish, LA",Nonfarm jobs,187484,Calculation: 010-511
+"Orleans Parish, LA_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Orleans Parish, LA",Nonfarm job growth,4,Calculation
+"Shelby County, TN_010_2014",01/01/2014 12:00:00 AM,2014,"Shelby County, TN",Total jobs,476351,010
+"Shelby County, TN_511_2014",01/01/2014 12:00:00 AM,2014,"Shelby County, TN",Farm jobs,207,511
+"Shelby County, TN_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Shelby County, TN",Nonfarm jobs,476144,Calculation: 010-511
+"Shelby County, TN_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Shelby County, TN",Nonfarm job growth,1,Calculation
+"Wake County, NC_010_2014",01/01/2014 12:00:00 AM,2014,"Wake County, NC",Total jobs,490404,010
+"Wake County, NC_511_2014",01/01/2014 12:00:00 AM,2014,"Wake County, NC",Farm jobs,858,511
+"Wake County, NC_Calculation: 010-511_2014",01/01/2014 12:00:00 AM,2014,"Wake County, NC",Nonfarm jobs,489546,Calculation: 010-511
+"Wake County, NC_Calculation_2014",01/01/2014 12:00:00 AM,2014,"Wake County, NC",Nonfarm job growth,4,Calculation

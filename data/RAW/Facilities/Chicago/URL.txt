@@ -1,0 +1,7 @@
+Libraries Information: https://catalog.data.gov/dataset/libraries-locations-hours-and-contact-information-f3c61
+
+Parks - Facilities & Features: https://catalog.data.gov/dataset/parks-facilities-features-c4402
+
+Health Care Facilities: https://catalog.data.gov/dataset/public-health-services-chicago-primary-care-community-health-centers-573f3
+
+Parking_Permit_Zones: https://catalog.data.gov/dataset/parking-permit-zones-6d501
