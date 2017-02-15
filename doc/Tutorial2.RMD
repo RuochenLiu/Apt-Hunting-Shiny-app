@@ -32,7 +32,8 @@ Shiny tutorials can be found at <http://shiny.rstudio.com/articles/>.
 From NYC open data, we downloaded 2009 housing sales data of Manhattan. `datatable` from the `DT` package is a great tool for exploring data in your R notebook or presentation. 
 
 ```{r load_data}
-mh2009=read.csv(file="../data/ManhattanHousing.csv")
+
+mh2009=read.csv(file="~/Documents/Spr2017-proj2-grp8/data/ManhattanHousing.csv")
 datatable(sample_n(mh2009, 50))
 ```
 
@@ -103,12 +104,14 @@ mh2009.selgeo=
 
 ## Plot using longitude and latitude
 ```{r code_plot_indiv, message=F, eval=F}
+#eval :will be printed ,not be run
 library(ggmap)
 ggmap(get_map("New York, New York",zoom=11,color = "bw")) + 
   geom_point(data=mh2009.selgeo, aes(x=lon,y=lat),  color='red') 
 ```
 ## Plot using longitude and latitude
 ```{r plot_indiv, message=F, warning=F, echo=F}
+#echo: will be run, not be printed
 library(ggmap)
 ggmap(get_map("New York, New York",zoom=11,color = "bw")) + 
   geom_point(data=mh2009.selgeo, aes(x=lon,y=lat),  color='red') 
