@@ -1,0 +1,83 @@
+---
+title: "City-Data"
+author: "Ruochen Liu rl2841"
+date: "February 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+city <- read.csv(file.choose())
+heal <- read.csv("../data/All-in/Healthcare.csv")
+park <- read.csv("../data/All-in/Park.csv")
+lib <- read.csv("../data/All-in/Library.csv")
+pop <- read.csv("../data/All-in/Population.csv")
+rest <- na.omit(read.csv("../data/All-in/Restaurant.csv"))
+rent <- na.omit(read.csv("../data/All-in/Rent.csv"))
+area <- na.omit(read.csv("../data/All-in/Zip Area.csv"))
+n <- nrow(city)
+#Park Number
+for(i in 1:n){
+  city$park.num[i] <- sum(heal$ZipCode == city$ZipCode[i])
+}
+#Healthcare Number
+for(i in 1:n){
+  city$heal.num[i] <- sum(heal$ZipCode == city$ZipCode[i])
+}
+#Library Number
+for(i in 1:n){
+  city$lib.num[i] <- sum(lib$ZipCode == city$ZipCode[i])
+}
+#Restaurant Number
+for(i in 1:n){
+  city$rest.num[i] <- sum(rest$ZipCode == city$ZipCode[i])
+}
+#Population
+for(i in 1:n){
+  if(sum(pop$zip.code == city$ZipCode[i]) != 0)
+  {
+    city$pop[i] <- pop$population[pop$zip.code == city$ZipCode[i]]
+  }
+  else
+  {
+    city$pop[i] <- 0
+  }
+}
+#Area
+for(i in 1:n){
+  if(sum(area$ZipCode == city$ZipCode[i]) != 0)
+  {
+    city$area[i] <- area$Area[area$ZipCode == city$ZipCode[i]]
+  }
+  else
+  {
+    city$area[i] <- 0
+  }
+}
+#Rent
+for(i in 1:n){
+  if(sum(rent$ZipCode == city$ZipCode[i]) != 0)
+  {
+    city$rent0[i] <- rent$Rent_0[rent$ZipCode == city$ZipCode[i]]
+    city$rent1[i] <- rent$Rent_1[rent$ZipCode == city$ZipCode[i]]
+    city$rent2[i] <- rent$Rent_2[rent$ZipCode == city$ZipCode[i]]
+    city$rent3[i] <- rent$Rent_3[rent$ZipCode == city$ZipCode[i]]
+    city$rent4[i] <- rent$Rent_4[rent$ZipCode == city$ZipCode[i]]
+  }
+  else
+  {
+    city$rent0[i] <- 0
+    city$rent1[i] <- 0
+    city$rent2[i] <- 0
+    city$rent3[i] <- 0
+    city$rent4[i] <- 0
+  }
+}
+# Write CSV
+citynm <- "SF"
+path <- paste("../data/City Data/", citynm,".csv", sep = "")
+write.csv(city, path)
+```
