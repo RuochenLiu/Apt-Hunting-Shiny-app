@@ -1,0 +1,39 @@
+---
+title: "Zip Code"
+author: "Ruochen Liu rl2841"
+date: "February 12, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+require(ggmap)
+x <- read.csv(choose.files(), header = TRUE)
+pattern <- "TX [0-9]+"
+zip <- regmatches(x[,2], regexpr(pattern, x[,2]))
+zip <- substr(zip, 3, 8)
+x$Zip <- zip
+x <- x[,-2]
+write.csv(x, file = file.choose())
+
+```
+
+```{r}
+x <- read.csv(choose.files(), header = TRUE)
+n <- nrow(x)
+for(i in 1:n){
+  p <- geocode(as.character(x[i,2]), output = "more")
+  x$Zip[i] <- as.numeric(levels(p$postal_code))
+}
+x <- x[,-2]
+write.csv(x, file = file.choose())
+```
+
+```{r}
+pattern2 <- ".*?CA"
+loc <- regmatches(x[,2], regexpr(pattern2, x[,2]))
+x$Location <- loc
+```

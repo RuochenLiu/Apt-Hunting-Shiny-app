@@ -1,0 +1,29 @@
+---
+title: "Combination"
+author: "Ruochen Liu rl2841"
+date: "February 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+a1 <- read.csv(file.choose(), header = TRUE)
+a2 <- read.csv(file.choose(), header = TRUE)
+a3 <- read.csv(file.choose(), header = TRUE)
+a4 <- read.csv(file.choose(), header = TRUE)
+a5 <- read.csv(file.choose(), header = TRUE)
+a6 <- read.csv(file.choose(), header = TRUE)
+q <- colnames(a1)
+colnames(a2) <- q
+colnames(a3) <- q
+colnames(a4) <- q
+colnames(a5) <- q
+colnames(a6) <- q
+a4$Zip.Code <- substr(a4$Zip.Code, 1, 5)
+a <- rbind(a1,a2,a3,a4,a5,a6)
+write.csv(a, "Restaurant.csv")
+
+```
