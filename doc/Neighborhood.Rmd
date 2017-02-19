@@ -1,0 +1,42 @@
+---
+title: "NBHD"
+author: "Ruochen Liu rl2841"
+date: "February 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+NYC <- read.csv("../data/City Data/NYC.csv")
+Chicago <- read.csv("../data/City Data/Chicago.csv")
+LA <- read.csv("../data/City Data/LA.csv")
+SF <- read.csv("../data/City Data/SF.csv")
+Austin <- read.csv("../data/City Data/Austin.csv")
+nb <- read.csv("../data/City Data/NBHD.csv")
+colnames(nb)[1] <- "NB"
+nb$NB <- as.character(nb$NB)
+nbhd <- function(csv, nb){
+  n <- nrow(csv)
+  m <- nrow(nb)
+  for(i in 1:n){
+    for(j in 1:m){
+      if(length(grep(as.character(csv$ZipCode[i]), as.character(nb$ZipCode[j])))==1){
+        csv$Neighborhood[i] <- nb$NB[j]
+        break
+      }
+      else{
+        csv$Neighborhood[i] <- 0
+      }
+    }
+  }
+  return(csv)
+}
+Austin <- nbhd(Austin, nb)
+city <- Austin
+citynm <- "Austin"
+path <- paste("../data/City Data/", citynm,".csv", sep = "")
+write.csv(city, path)
+```

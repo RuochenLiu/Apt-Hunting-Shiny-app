@@ -1,0 +1,34 @@
+---
+title: "Population_Density"
+author: "Ruochen Liu rl2841"
+date: "February 19, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+NYC <- read.csv("../data/City Data/NYC.csv")
+Chicago <- read.csv("../data/City Data/Chicago.csv")
+LA <- read.csv("../data/City Data/LA.csv")
+SF <- read.csv("../data/City Data/SF.csv")
+Austin <- read.csv("../data/City Data/Austin.csv")
+
+Den <- function(csv){
+  csv$density <- csv$pop/csv$area
+  return(csv)
+}
+
+NYC <- Den(NYC)
+Chicago <- Den(Chicago)
+Austin <- Den(Austin)
+SF <- Den(SF)
+LA <- Den(LA)
+
+city <- Chicago
+citynm <- "Chicago"
+path <- paste("../data/City Data/", citynm,".csv", sep = "")
+write.csv(city, path)
+```

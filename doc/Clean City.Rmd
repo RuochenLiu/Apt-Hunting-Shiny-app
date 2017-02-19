@@ -1,0 +1,55 @@
+---
+title: "City Clean"
+author: "Ruochen Liu rl2841"
+date: "February 19, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+NYC <- read.csv("../data/City Data/NYC.csv")
+Chicago <- read.csv("../data/City Data/Chicago.csv")
+LA <- read.csv("../data/City Data/LA.csv")
+SF <- read.csv("../data/City Data/SF.csv")
+Austin <- read.csv("../data/City Data/Austin.csv")
+
+nbhd_com <- function(csv){
+  nb <- levels(csv$Neighborhood)
+  n <- length(nb)
+  d0 <- csv[1,]
+  d1 <- csv[1,]
+  for(i in 1:n){
+    d <- csv[csv$Neighborhood == nb[i],]
+    d1$park.num <- sum(d$park.num)
+    d1$heal.num <- sum(d$heal.num)
+    d1$lib.num <- sum(d$lib.num)
+    d1$rest.num <- sum(d$rest.num)
+    d1$pop <- sum(d$pop)
+    d1$area <- sum(d$area)
+    d1$rent0 <- mean(d$rent0)
+    d1$rent1 <- mean(d$rent1)
+    d1$rent2 <- mean(d$rent2)
+    d1$rent3 <- mean(d$rent3)
+    d1$rent4 <- mean(d$rent4)
+    d1$Neighborhood <- nb[i]
+    d0 <- rbind(d0,d1)
+  }
+  return(d0[-1,])
+}
+
+NYC <- nbhd_com(NYC)
+Chicago <- nbhd_com(Chicago)
+SF <- nbhd_com(SF)
+LA <- nbhd_com(LA)
+Austin <- nbhd_com(Austin)
+```
+
+```{r}
+city <- Austin
+citynm <- "Austin"
+path <- paste("../data/City Data/", citynm,".csv", sep = "")
+write.csv(city, path)
+```
