@@ -25,7 +25,7 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                                            "San Francisco" = "SF",
                                                            "Austin" = "Austin",
                                                            "Chicago" = "Chicago")
-                                               ),
+                                   ),
                                    br(),
                                    p(h4(strong("Happy with your current neighborhood? Let's find a similar one in your target city"))),
                                    selectInput("current_city", 
@@ -36,11 +36,13 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                                            "San Francisco" = "SF",
                                                            "Austin" = "Austin",
                                                            "Chicago" = "Chicago")
-                                               ),
+                                   ),
                                    br(),
                                    selectInput("current_neighborhood", 
                                                label = "Current neighborhood",
-                                               choices = c("Not Selected" = "NA", main[, 2])),
+                                               #choices = c("Not Selected" = "NA", "UW" = "Upper West Side")
+                                               choices = c("Not Selected" = "NA", main[,2])
+                                               ),
                                    br(),
                                    selectInput("current_br", 
                                                label = "Number of bedrooms of your current residence",
@@ -49,7 +51,7 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                                            "2b" = 2,
                                                            "3b" = 3,
                                                            "4b" = 4)
-                                               ),
+                                   ),
                                    br(),
                                    p(h4(strong("Or, adjust your criteria manually"))),
                                    selectInput("manual_br", 
@@ -59,7 +61,7 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                                            "2b" = 2,
                                                            "3b" = 3,
                                                            "4b" = 4)
-                                               ),
+                                   ),
                                    br(),
                                    sliderInput("manual_rent", 
                                                label = "Rent range", 
@@ -95,9 +97,9 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                  mainPanel(
                                    tableOutput("view")
                                  )
-                                 )))
-                      
-                      
+                               )))
+           
+           
 )
 
 server=shinyServer(function(input, output){})
