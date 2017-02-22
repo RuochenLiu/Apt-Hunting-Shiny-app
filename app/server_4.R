@@ -3,12 +3,14 @@ library(choroplethr)
 library(choroplethrZip)
 library(dplyr)
 
-nb <- read.csv("../data/City Data/NBHD.csv")
-colnames(nb)[1] <- "NB"
-nb$NB <- as.character(nb$NB)
-main <- read.csv("../data/City Data/Main.csv")
 source("../doc/compare.R")
 source("../doc/score.R")
+source("../doc/crowded.R")
+nb <- read.csv("../data/City Data/NBHD.csv")
+main <- read.csv("../data/City Data/Main.csv")
+#main <- crowd(main)
+nb$NB <- as.character(nb$NB)
+
 
 # Define server to find top three neighborhood for users.
 shinyServer(function(input, output) {
@@ -20,7 +22,7 @@ shinyServer(function(input, output) {
     
     # If user chooses his current neighbirhood.
     
-    if(input$current_neighborhood != "NA"){
+    if(input$current_city != "NA"){
       st <- main[main$Neighborhood == input$current_neighborhood, ]
       top <- comp(city, st[1,], as.numeric(input$current_br))
     }
@@ -55,11 +57,24 @@ shinyServer(function(input, output) {
       }
       
     }
+   
+    
+    #ZipCode List
+    zip1 <- strsplit(as.character(nb$ZipCode[nb$NB == top$Neighborhood[1]]), ", ")
+    zip2 <- strsplit(as.character(nb$ZipCode[nb$NB == top$Neighborhood[2]]), ", ")
+    zip3 <- strsplit(as.character(nb$ZipCode[nb$NB == top$Neighborhood[3]]), ", ")
+    
+    zipcode <- list(zip1[[1]], zip2[[1]], zip3[[1]])
+    
     
     return(top)
   })
   
+  
+  
+  
   # Results
+  
   
   output$view <- renderTable({
     head(top3())

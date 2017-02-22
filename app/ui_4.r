@@ -1,6 +1,6 @@
 library(shiny)
 
-setwd('C:/Users/Lloyd/Documents/GitHub/Spr2017-proj2-grp8/app')
+
 main <- read.csv("../data/City Data/main.csv")
 
 ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
@@ -20,26 +20,28 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                    
                                    selectInput("target_city", 
                                                label = "Where are you reallocating to?",
-                                               choices = c("New York City" =  1,
-                                                           "Los Angeles" = 2,
-                                                           "San Francisco" = 3,
-                                                           "Austin" = 4,
-                                                           "Chicago" = 5)
+                                               choices = c("New York City" =  "NYC",
+                                                           "Los Angeles" = "LA",
+                                                           "San Francisco" = "SF",
+                                                           "Austin" = "Austin",
+                                                           "Chicago" = "Chicago")
                                                ),
                                    br(),
                                    p(h4(strong("Happy with your current neighborhood? Let's find a similar one in your target city"))),
                                    selectInput("current_city", 
                                                label = "Current city",
-                                               choices = c("New York City",
-                                                           "Los Angeles",
-                                                           "San Francisco",
-                                                           "Austin",
-                                                           "Chicago")
+                                               choices = c("Not Selected" = "NA",
+                                                           "New York City" = "NY",
+                                                           "Los Angeles" = "LA",
+                                                           "San Francisco" = "SF",
+                                                           "Austin" = "Austin",
+                                                           "Chicago" = "Chicago")
                                                ),
                                    br(),
                                    selectInput("current_neighborhood", 
                                                label = "Current neighborhood",
-                                               choices = c("1","2")
+                                               #choices = main[main$City == current_city(), 2]
+                                               choices = c("Not Selected" = "NA","Upper West Side" = "Upper West Side","Upper East Side" = "Upper East Side")
                                                ),
                                    br(),
                                    selectInput("current_br", 
@@ -71,9 +73,9 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                    br(),
                                    selectInput("manual_density", 
                                                label = "Population density",
-                                               choices = c("Crowded",
-                                                           "Medium",
-                                                           "Sparse")
+                                               choices = c("Crowded" = 3,
+                                                           "Medium" = 2,
+                                                           "Sparse" = 1)
                                    ),
                                    br(),
                                    p(h4(strong("Other factors to weigh in?"))),
@@ -92,7 +94,9 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                  ),
                                  
                                  
-                                 mainPanel()
+                                 mainPanel(
+                                   tableOutput("view")
+                                 )
                                  )))
                       
                       
