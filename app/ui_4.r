@@ -1,7 +1,7 @@
 library(shiny)
 
 
-main <- read.csv("../data/City Data/main.csv")
+main <- read.csv("../data/City Data/main.csv", as.is = TRUE)
 
 ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                       
