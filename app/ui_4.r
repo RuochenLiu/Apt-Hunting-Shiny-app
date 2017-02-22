@@ -40,9 +40,7 @@ ui=shinyUI(navbarPage("Perfect City Go", theme="black.css",
                                    br(),
                                    selectInput("current_neighborhood", 
                                                label = "Current neighborhood",
-                                               #choices = main[main$City == current_city(), 2]
-                                               choices = c("Not Selected" = "NA","Upper West Side" = "Upper West Side","Upper East Side" = "Upper East Side")
-                                               ),
+                                               choices = main[, 2]),
                                    br(),
                                    selectInput("current_br", 
                                                label = "Number of bedrooms of your current residence",
