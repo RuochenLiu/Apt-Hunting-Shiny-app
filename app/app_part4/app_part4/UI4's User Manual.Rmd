@@ -1,0 +1,27 @@
+---
+title: "UI4's User Manual"
+author: "Bo Peng (bp2494)"
+date: "February 19, 2017"
+output: html_document
+---
+
+UI4.R is the UI for the 4th tab. The tab helps user to find a suitable neighborhood in his/hers target city.  
+
+List of input objects that the UI returns:  
+
+target_city: a string that's "New York City", "Los Angeles", "San Francisco", "Austin" or "Chicago"  
+current_city: same as above  
+current_neighborhood: a string that's one of the neighborhoods of "current_city"  
+current_br: a numeric that's 0, 1, 2, 3 or 4  
+
+manual_br: substitute for current_br  
+manual_rent: a numeric vector consisting two numbers, the lower and upper limits of rent  
+manual_density: a string that's "Crowded", "Medium", or "Sparse"  
+
+health, libraries, parks, restaurants: logic TRUE or FALSE, whether or not a factor is taken into consideration  
+
+
+Note:
+In server.R, please add line: output\$current_city <- as.factor(input\$current_city)  
+
+Replace code(c("1", "2")) in line 42 with main[main\$City == output\$current_city, 2] when server.R is finished.

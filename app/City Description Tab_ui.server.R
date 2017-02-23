@@ -39,8 +39,9 @@ server=shinyServer(function(input, output){
   ### 2. CITY DESCRIPTION TAB
   
   ## job by type
-  setwd('/Users/limengchen/Desktop/Spr2017-proj2-grp8-master/data/data for plot in City Description')
-  Job=read.csv('jobs numbers by types.csv')
+    setwd("~/GitHub/Spr2017-proj2-proj2_grp8")
+    Job <- read.csv("~/GitHub/Spr2017-proj2-proj2_grp8/data/data for plot in City Description/jobs numbers by types.csv")
+    
   
   Job=data.frame(count=Job$Total,category=Job$job.types)
   Job$fraction=Job$count/sum(Job$count) 

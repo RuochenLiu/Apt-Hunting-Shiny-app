@@ -1,4 +1,4 @@
-setwd('/Users/limengchen/Desktop/Spr2017-proj2-grp8-master/data/City Raw')
+setwd("~/GitHub/Spr2017-proj2-proj2_grp8/data/City Raw")
 
 library(choroplethrZip)
 library(dtplyr)

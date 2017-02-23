@@ -1,0 +1,9 @@
+Parking Lot: https://data.cityofnewyork.us/City-Government/Parking-Lot/h7zy-iq3d
+
+Open Space (Parks): https://data.cityofnewyork.us/Recreation/Open-Space-Parks-/g84h-jbjm
+
+Athletic Facilities: https://data.cityofnewyork.us/City-Government/Athletic-Facilities/yann-8etk
+
+Health Care Corporation: https://catalog.data.gov/dataset/health-and-hospitals-corporation-hhc-facilities-7faf2
+
+Library: https://catalog.data.gov/dataset/library

@@ -1,0 +1,22 @@
+job types,NY,Chicago,Austin,LA,SF,Total
+ Farm employment,40,70,57,30,80,435
+ Forestry and fishing,350,290,50,83,870,1705
+ Mining,194,10,40,49,53,396
+ Utilities,480,201,181,101,965,2032
+ Construction,2209,1875,1080,1101,1968,10459
+ Manufacturing,1600,965,901,1093,1201,6867
+ Wholesale trade,900,650,561,931,865,4867
+ Retail trade,2200,1630,1311,1563,1563,9745
+ Transportation,3390,1499,924,1520,1583,9923
+ Information,2295,1310,591,633,2797,8138
+ Finance and insurance,4759,3609,1275,1351,3075,15813
+ Real estate and rental,1370,1070,886,1206,869,7121
+ Professional and technical services,1745,1484,522,896,977,7144
+ Management of enterprises,1585,530,453,635,1607,5118
+ Administrative services,2064,2434,1819,1802,1892,12276
+ Educational services,867,567,288,295,577,2870
+ Health care and social assistance,3590,2677,1612,1598,801,12562
+" Arts, entertainment, and recreation",2290,309,480,401,1069,5449
+ Accommodation and food services,2342,1810,789,1401,1644,9357
+ Government  enterprises,2514,2101,1117,1251,1306,9933
+   Military,330,201,80,105,205,1412

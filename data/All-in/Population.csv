@@ -1,4 +1,4 @@
-zip code,population,latitude.x,longitude.x,latitude.y,longitude.y,city,state,county
+zip code,population,Lat,Lon,latitude.y,longitude.y,city,state,county
 601,18570,18.1805555,-66.7499615,18.165273,-66.722583,Adjuntas,PR,Adjuntas
 602,41520,18.3622681,-67.17613,18.393103,-67.180953,Aguada,PR,Aguada
 603,54689,18.455183,-67.1198874,18.455913,-67.14578,Aguadilla,PR,Aguadilla
