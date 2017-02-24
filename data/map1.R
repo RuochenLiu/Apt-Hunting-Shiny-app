@@ -7,13 +7,14 @@ library(leaflet)
 suppressPackageStartupMessages(library(tilegramsR))
 library(ggmap)
 downloaddir<-getwd()
-
+zip_code <- list("10025", "10024")
 #city map by zipcode
 #ny
 ny_dat <-readOGR(downloaddir, "zipcode_ny") 
 crsmerc<-CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
 ny_transformed<-spTransform(ny_dat,CRS=crsmerc)
 ny_label<-paste(ny_transformed$ZIPCODE,"in",ny_transformed$PO_NAME)
+highlight_1 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code[[1]]))
 ny_map<-leaflet(ny_transformed) %>%
   addProviderTiles("Stamen.Watercolor") %>%
   addPolygons(options = pathOptions(),opacity=0.8,weight=1,color="#660000",highlightOptions = highlightOptions(color="#FFCC99",opacity = 0.5, weight = 2, fillOpacity = 0.5,
@@ -23,7 +24,12 @@ ny_map<-leaflet(ny_transformed) %>%
                 "font-style" = "italic",
                 "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
                 "font-size" = "12px",
-                "border-color" = "rgba(0,0,0,0.5)")))
+                "border-color" = "rgba(0,0,0,0.5)"))) %>%
+  addPolygons(data = highlight_1, options = pathOptions(),opacity=0.8,weight=1,color="#e34a33",highlightOptions = highlightOptions(color="#FFCC99",opacity = 0.5, weight = 2, fillOpacity = 0.5,
+
+                                                                                                                                   
+                                                                                                                                   
+                                                                                                                                                                                                                                                                      bringToFront = TRUE, sendToBack = TRUE))
 #la
 la_dat <-readOGR(downloaddir, "zipcode_la")
 la_transformed<-spTransform(la_dat,CRS=crsmerc)

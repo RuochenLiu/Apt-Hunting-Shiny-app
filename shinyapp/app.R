@@ -1,0 +1,647 @@
+
+
+
+library(shiny)
+library(shinythemes)
+library(radarchart)
+library(ggplot2)
+library(ggmap)
+library(choroplethrZip)
+library(plyr)
+library(dtplyr)
+library(dplyr)
+library(DT)
+library(lubridate)
+library(rgdal)
+library(rgeos)
+library(sp)
+require(RColorBrewer)
+library(leaflet)
+library(fmsb)
+suppressPackageStartupMessages(library(tilegramsR))
+downloaddir<-"data"
+
+
+main <- read.csv("data/City Data/Main.csv", as.is = TRUE)
+Job <- read.csv("data/data for plot in City Description/jobs numbers by types.csv")
+job=read.csv('data/data for plot in City Description/job by cities.csv')
+salary=read.csv('data/data for plot in City Description/wage_city.csv')
+
+
+source("source/compare.R")
+source("source/Score.R")
+nb <- read.csv("data/City Data/NBHD.csv")
+nb$NB <- as.character(nb$NB)
+
+
+
+ui=shinyUI(
+  
+  div(id='canvas',
+      
+      navbarPage(strong('Perfect City Go', style='color:black;'), theme = shinytheme('darkly'),
+                 
+                 ### 1. INTRODUCTION TAB
+                 tabPanel('Introduction',
+                          mainPanel(width=12,
+                                    h2('A RShiny app to choose your perfect city in USA'),
+                                    br(),
+                                    h3('Background'),
+                                    p('We notice USA is becoming more and more popular for people all around the word,
+                                      especially for several famous cities such as New York, Chicago, Austin, Los Angeles and San Francisco.
+                                      These cities are all such big apples to give you convenience of living and job opportunities.
+                                      Chooing the most suitable place for you seems a hot topic.'),
+                                    br(),
+                                    h3('Summary of this APP'),
+                                    p('-',strong('City Description'),':presents 4 visualizations for job opportunities both for different types and differnet cities, wages differences, population and facilities.'),
+                                    p('-',strong('Heat Map'),':shows different heatmap in 5 cities when considering several factors such as restaurant and rent.'),
+                                    p('-',strong('Find Your Place'), ':enables users to pinpoint the most importatn factors to finally search the most suitable place with map.'),
+                                    p('-',strong('Contact'),':shows group members contact for further questions.'),
+                                    br(),
+                                    h3('Quick Start'),
+                                    p('1. Get yourself familar with the results showing in the City Description tab.'),
+                                    p('2. Choose your expected city with different factors in Heatmap tab. '),
+                                    p('3. Choose your expected rent range and type, population density and factors to weigh in Find Your Place tab. '),
+                                    p('4. Get your result showing the map.'),
+                                    p('5. Enjoy!'),
+                                    br(),
+                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spring2017-Proj2-grp8'))),
+                                    div(class='footer','Applied Data Science')
+                                    
+                                    )),
+                 
+                 ### 2. CITY DESCRIPTION TAB
+                 tabPanel('City Description',
+                          titlePanel(title=h4('statistic summary',align='center')),
+                          mainPanel(
+                              tabsetPanel(
+                                  tabPanel('Job_type',
+                                           plotOutput('plot_job_type',height=500)),
+                                  tabPanel('Job_city',
+                                           plotOutput('plot_job_city',height=500)),
+                                  tabPanel('Wage',
+                                           plotOutput('plot_wage',height=500)),
+                                  tabPanel('Population',
+                                           plotOutput('plot_population',height=500))
+                              ))),
+                 
+                 # heatmap TAB
+                 tabPanel('Heatmap',
+                          titlePanel(
+                              h2("heatmap of your city"
+                              )),
+                          
+                          sidebarLayout(
+                              sidebarPanel(
+                                  fixed=TRUE,draggable=TRUE,
+                                  top=60,left="auto",right=20,bottom="auto",
+                                  width=330,height="auto",
+                                  
+                                  selectInput("city", 
+                                              label = "Where are you living?",
+                                              choices = c("New York" = "New York" ,
+                                                          "Los Angeles" = "Los Angeles",
+                                                          "San Francisco" = "San Francisco",
+                                                          "Austin" = "Austin",
+                                                          "Chicago" = "Chicago")
+                                  ),
+                                  selectInput("asp", 
+                                              label = "Which aspect you want to learn about?",
+                                              choices = c("Population" =  1,
+                                                          "crime rate" = 2,
+                                                          "library" = 3,
+                                                          "Restaurant" = 4,
+                                                          "park" = 5,
+                                                          "health care" =6)
+                                  )
+                              ),
+                              
+                              
+                              mainPanel(
+                                  plotOutput("heatmap",width = "800px" , height = "800px")
+                              )
+                          )),
+                 
+                 # 4. FIND YOUR NEIGHBORHOOD TAB
+                 tabPanel('Find Your Neighborhood',
+                          titlePanel(
+                              h2("Reallocating to a new city?", 
+                                 br(), 
+                                 "Find the neighborhood that's perfect for you")),
+                          
+                          sidebarLayout(
+                              sidebarPanel(
+                                  
+                                  
+                                  selectInput("target_city", 
+                                              label = "Where are you reallocating to?",
+                                              choices = c("New York City" =  "ny",
+                                                          "Los Angeles" = "la",
+                                                          "San Francisco" = "sfo",
+                                                          "Austin" = "aus",
+                                                          "Chicago" = "chi")
+                                  ),
+                                  br(),
+                                  p(h4(strong("Happy with your current neighborhood? Let's find a similar one in your target city"))),
+                                  selectInput("current_city", 
+                                              label = "Current city",
+                                              choices = c("Not Selected" = "NA",
+                                                          "New York City" = "NY",
+                                                          "Los Angeles" = "LA",
+                                                          "San Francisco" = "SF",
+                                                          "Austin" = "Austin",
+                                                          "Chicago" = "Chicago")
+                                  ),
+                                  br(),
+                                  selectInput("current_neighborhood", 
+                                              label = "Current neighborhood",
+                                              #choices = c("Not Selected" = "NA", "UW" = "Upper West Side")
+                                              choices = c("Not Selected" = "NA", main[,2])
+                                  ),
+                                  br(),
+                                  selectInput("current_br", 
+                                              label = "Number of bedrooms of your current residence",
+                                              choices = c("Studio" = 0,
+                                                          "1b" = 1,
+                                                          "2b" = 2,
+                                                          "3b" = 3,
+                                                          "4b" = 4)
+                                  ),
+                                  br(),
+                                  p(h4(strong("Or, adjust your criteria manually"))),
+                                  selectInput("manual_br", 
+                                              label = "Number of bedrooms",
+                                              choices = c("Studio" = 0,
+                                                          "1b" = 1,
+                                                          "2b" = 2,
+                                                          "3b" = 3,
+                                                          "4b" = 4)
+                                  ),
+                                  br(),
+                                  sliderInput("manual_rent", 
+                                              label = "Rent range", 
+                                              min = 850, 
+                                              max = 7900, 
+                                              value = c(1200, 2000), 
+                                              step = 10, 
+                                              round = TRUE),
+                                  br(),
+                                  selectInput("manual_density", 
+                                              label = "Population density",
+                                              choices = c("Crowded" = 3,
+                                                          "Medium" = 2,
+                                                          "Sparse" = 1)
+                                  ),
+                                  br(),
+                                  p(h4(strong("Other factors to weigh in?"))),
+                                  checkboxInput("health", 
+                                                label = "Healthcare facilities", 
+                                                value = FALSE),
+                                  checkboxInput("libraries", 
+                                                label = "Libraries", 
+                                                value = FALSE),
+                                  checkboxInput("parks", 
+                                                label = "Parks", 
+                                                value = FALSE),
+                                  checkboxInput("restaurants", 
+                                                label = "Restaurants", 
+                                                value = FALSE)
+                              ),
+                              
+                              
+                              mainPanel(
+                                  tableOutput("view"),
+                                  tabsetPanel(type="pill",
+                                              tabPanel("map",
+                                                       leafletOutput("leafmap",height=800)
+                                              )
+                                             
+                                              
+                                  )
+                              )
+                          )),
+      
+                 
+                 ### 5.CONTACT TAB
+                 tabPanel('Contact',
+                          mainPanel(width=12,
+                                    h2('Contact Information'),
+                                    br(),
+                                    p('We are Columbia university students at Department of statistics and Actuarial Science.'),
+                                    p('If you are interested in our project or have questions about APP, feel free to contact us.'),
+                                    br(),
+                                    h4('Our email address are as follows:'),
+                                    br(),
+                                    p(strong('Ruochen Liu'),':rl2841@columbia.edu'),
+                                    p(strong('Bo Peng'),':bp2494@columbia.edu'),
+                                    p(strong('Zheren Tang'),':zt2191@columbia.edu'),
+                                    p(strong('Mengchen Li'),':ml3890@columbia.edu'),
+                                    p(strong('Yuan Mei'),':ym2583@columbia.edu'),
+                                    br(),
+                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spring2017-Proj2-grp8')))
+                                    
+                          ))
+                 
+      ))
+)
+
+server=shinyServer(function(input, output){
+    
+    ### 2. CITY DESCRIPTION TAB
+    
+    ## job by type
+    
+    
+    Job=data.frame(count=Job$Total,category=Job$job.types)
+    Job$fraction=Job$count/sum(Job$count) 
+    Job=Job[order(Job$fraction),]
+    Job$ymax=cumsum(Job$fraction)
+    Job$ymin=c(0,head(Job$fraction,n=-1))
+    
+    output$plot_job_type=renderPlot({
+        ggplot(Job, aes(fill=category,ymax=ymax,ymin=ymin,xmax=10,xmin=3))+
+            geom_rect()+
+            coord_polar(theta='y')+
+            #xlim(c(0,10))+
+            theme(panel.grid=element_blank())+
+            theme(axis.text = element_blank())+
+            theme(axis.ticks = element_blank())+
+            annotate('text',x=0,y=0,label='Jobs by type')+
+            labs(title='')
+    })
+    
+    ## job by city
+    output$plot_job_city=renderPlot({
+        ggplot(job,aes(x=City, fill=City, y=Total))+
+            geom_bar(stat = 'identity')+
+            scale_fill_hue(c=40)+
+            coord_flip()
+    })
+    
+    ## wage
+    City=c(rep('NY',69),rep('Chicago',58),rep('Austin',72),rep('LA',68), rep('SF',37))
+    value=c(salary$NY[1:69],salary$Chicago[1:58],salary$Austin[1:72],salary$LA[1:68],salary$SF[1:37])
+    salary_city=data.frame(City,value)
+    
+    salary_mean=aggregate(salary_city$value,by=list(salary_city$City),mean); 
+    colnames(salary_mean)=c('city','mean')
+    salary_sd=aggregate(salary_city$value,by=list(salary_city$City),sd);
+    colnames(salary_sd)=c('city','sd')
+    salary=merge(salary_mean,salary_sd, by.x=1, by.y=1)
+    
+    output$plot_wage=renderPlot({
+        ggplot(salary_city)+
+            geom_point(aes(x=City, y=value), colour=rgb(0.8,0.7,0.1,0.4),size=5)+
+            geom_point(data = salary,aes(x=city, y=mean),colour = rgb(0.6,0.5,0.4,0.7) , size = 8)+
+            geom_errorbar(data=salary,aes(x=city, y=sd,ymin=mean-sd,
+                                          ymax=mean+sd),colour = rgb(0.4,0.8,0.2,0.4) , width = 0.7 , size=1.5)
+    })
+    
+    ## Population
+    # Population
+    population=c(7690221,	1393765,	694347,	5930283	,849762)
+    population=data.frame(t(population))
+    colnames(population)=c('NYC','Chicago','LA','SF','Austin')
+    
+    max=max(population)
+    min=min(population)
+    population=rbind(rep(max,5),rep(min,5),population)
+    
+    output$plot_population=renderPlot({
+        radarchart( population, axistype=1, 
+                    #custom polygon
+                    pcol=rgb(0.2,0.5,0.5,0.9), pfcol=rgb(0.2,0.5,0.5,0.5), plwd=4 , 
+                    #custom the grid
+                    cglcol="grey", cglty=1, axislabcol="grey", caxislabels=seq(min,max,5), cglwd=0.8,
+                    #custom labels
+                    vlcex=0.8,title='population for in cities')
+    })
+    
+    
+    #heatmap
+    
+    data("zip.regions")
+    map <- reactive({
+        if (input$asp == 1){
+            d <- read.csv("data/All-in/Population.csv")
+            d <- d[d$city == input$city,]
+            d <- na.omit(d)
+            d_map <- get_map(location = input$city ,maptype = "terrain" , zoom = 13)
+            map <- ggmap(d_map, extent = "device") + 
+                geom_density2d(data = d, 
+                               
+                               aes(x = Lon, y = Lat), size = 0.3) + 
+                stat_density2d(data = d, 
+                               
+                               aes(x = Lon, y = Lat, fill = ..level.., alpha = ..level..), size = 0.01, 
+                               bins = 16, geom = "polygon") + scale_fill_gradient(low = "green", high = "red") + 
+                scale_alpha(range = c(0, 0.3), guide = FALSE)
+            
+        }
+        
+        if(input$asp == 2 ){
+            crime <- read.csv(paste("data/crime/",input$city,".csv",sep = ""))
+            crime <- na.omit(crime)
+            crime_map <- get_map(location = input$city,maptype = 'terrain',zoom = 12)
+            map <- ggmap(crime_map, extent = "device") + 
+                geom_density2d(data = crime, 
+                               
+                               aes(x = Lon, y = Lat), size = 0.3) + 
+                stat_density2d(data = crime, 
+                               
+                               aes(x = Lon, y = Lat, fill = ..level.., alpha = ..level..), size = 0.01, 
+                               bins = 16, geom = "polygon") + scale_fill_gradient(low = "green", high = "red") + 
+                scale_alpha(range = c(0, 0.3), guide = FALSE)
+        }
+        
+        if(input$asp == 3){
+            lib <- read.csv(paste("data/City Raw/",input$city, "/Library.csv", sep = ""))
+            lib=
+                lib%>%
+                filter(lib$ZIP>0)%>%
+                mutate(region=as.character(ZIP))
+            lib=
+                lib%>%
+                group_by(region)%>%
+                summarise(
+                    value=n()
+                )
+            map <- zip_choropleth(lib,
+                                  title       = paste("Library in ", input$city, sep = ""),
+                                  legend      = "Number of Libraries",
+                                  zip_zoom = lib$region)
+            
+        }
+        if (input$asp == 4){
+            res <- read.csv(paste("data/City Raw/",input$city, "/Restaurant.csv", sep = ""))
+            res=
+                res%>%
+                filter(res$ZIP>0)%>%
+                mutate(region=as.character(ZIP))
+            res=
+                res%>%
+                group_by(region)%>%
+                summarise(
+                    value=n()
+                )
+            map <- zip_choropleth(res,
+                                  title       = paste("Restaurant in ", input$city, sep = ""),
+                                  legend      = "Number of restaurants",
+                                  zip_zoom = res$region[res$region %in% zip.regions$region])
+        }
+        if (input$asp == 5){
+            res <- read.csv(paste("data/City Raw/",input$city, "/Park.csv", sep = ""))
+            res=
+                res%>%
+                filter(res$ZIP>0)%>%
+                mutate(region=as.character(ZIP))
+            res=
+                res%>%
+                group_by(region)%>%
+                summarise(
+                    value=n()
+                )
+            map <- zip_choropleth(res,
+                                  title       = paste("Park in ", input$city, sep = ""),
+                                  legend      = "Number of Parks",
+                                  zip_zoom = res$region[res$region %in% zip.regions$region])
+        }
+        if (input$asp == 6){
+            res <- read.csv(paste("data/City Raw/",input$city, "/Health.csv", sep = ""))
+            res=
+                res%>%
+                filter(res$ZIP>0)%>%
+                mutate(region=as.character(ZIP))
+            res=
+                res%>%
+                group_by(region)%>%
+                summarise(
+                    value=n()
+                )
+            map <- zip_choropleth(res,
+                                  title       = paste("Health care in ", input$city, sep = ""),
+                                  legend      = "Number of Health cares",
+                                  zip_zoom = res$region[res$region %in% zip.regions$region])
+        }
+        
+        
+        return(map)
+    })
+    
+    
+    
+    
+    
+    output$heatmap <- renderPlot( {
+        map()
+        
+        
+    }
+    
+    
+    )
+    
+    # Get target city.
+    
+    top3 <- reactive({
+        city <- main[main$City == input$target_city,]
+        
+        # If user chooses his current neighbirhood.
+        
+        if(input$current_neighborhood != "NA"){
+            st <- main[main$Neighborhood == input$current_neighborhood, ]
+            top <- comp(city, st[1,], as.numeric(input$current_br))
+        }
+        
+        # If not
+        
+        else{
+            
+            br <- as.numeric(input$manual_br) + 9
+            up <- as.numeric(input$manual_rent[2])
+            down <- as.numeric(input$manual_rent[1])
+            den <- as.numeric(input$manual_density)
+            if(den == 3){
+                den0 <- 150
+                den1 <- 500
+            }
+            if(den == 2){
+                den0 <- 50
+                den1 <- 150
+            }
+            if(den == 1){
+                den0 <- 0
+                den1 <- 50
+            }
+            
+            # Check rent range.
+            
+            dest <- city[city[,br] <= up & city[,br] >= down & city$density < den1 & city$density >den0, ]
+            
+            
+            if(nrow(dest) == 0){
+                top <- NA
+            }
+            else {
+                if(nrow(dest) < 3 & nrow(dest) >0){
+                    top <- dest
+                }
+                else{
+                    p <- as.numeric(input$parks)
+                    r <- as.numeric(input$restaurants)
+                    h <- as.numeric(input$health)
+                    l <- as.numeric(input$libraries)
+                    top <- score(dest, p, h, l, r) 
+                }
+            }
+        }
+        
+        
+        
+        if(is.na(top) == FALSE){
+            if(top$density[1] >150){
+                top$density <- rep("Crowded", nrow(top))
+            }
+            else{
+                if(top$density[1] < 50){
+                    top$density <- rep("Sparse", nrow(top))
+                }
+                else{
+                    top$density <- rep("Medium", nrow(top))
+                }
+            }
+        }
+        
+        if(is.na(top) == FALSE){
+            colnames(top) <- c("City","Neighborhood","Park","Healthcare","Library","Restaurant","Population","Area","Rent-Studio","Rent-1BR","Rent-2BR","Rent-3BR","Rent-4BR","Pop-Density")
+        }
+        
+        return(top)
+        
+    })
+    
+    
+    
+    zip_code <- reactive({
+        
+        if(is.na(top3()) == FALSE){
+            
+            #ZipCode List
+            zip1 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[1]]), ", ")
+            zip2 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[2]]), ", ")
+            zip3 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[3]]), ", ")
+            
+            if(length(zip1) == 1){
+                zip1 <- zip1[[1]]
+            }
+            else{
+                zip1 <- NA
+            }
+            if(length(zip2) == 1){
+                zip2 <- zip2[[1]]
+            }
+            else{
+                zip2 <- NA
+            }
+            if(length(zip3) == 1){
+                zip3 <- zip3[[1]]
+            }
+            else{
+                zip3 <- NA
+            }
+            
+            z <- list(zip1, zip2, zip3)
+        }
+        
+        else{
+            zip1 <- NA
+            zip2 <- NA
+            zip3 <- NA
+            z <- list(zip1,zip2,zip3)
+        }
+        
+        return(z) # Zip Code List, Length=3
+    })
+    
+    N <- "Sorry! There is no result." 
+    
+    
+    
+    # Table Results
+    
+    output$view <- renderTable({
+        if(is.na(top3()) == FALSE){
+            head(top3())
+        }
+        else{
+            head(N)
+        }
+    })
+    
+    
+    # Leaflet map
+    
+    crsmerc<-CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
+    
+    leafletmap <- reactive({
+        
+        c <- paste('zipcode_',input$target_city, sep = "")
+        ny_dat <-readOGR(downloaddir, c) 
+        
+        ny_transformed<-spTransform(ny_dat,CRS=crsmerc)
+        
+        pattern <- "zip$|ZIPCODE$|zipcode$"
+        q <- grep(pattern, names(ny_transformed))
+        names(ny_transformed)[q] <- "ZIPCODE"
+        
+        highlight_3 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[3]]))
+        highlight_2 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[2]]))
+        highlight_1 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[1]]))
+        label_1 <-  top3()$Neighborhood[1]
+        label_2 <- top3()$Neighborhood[2]
+        label_3 <- top3()$Neighborhood[3]
+        
+        
+        
+        ny_map<- leaflet(ny_transformed) %>%
+            addProviderTiles("Stamen.Toner") %>%
+            addPolygons(options = pathOptions(),opacity=0.8,weight=1,color="#ffffb2")%>%
+            addPolygons(data = highlight_3, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#7fcdbb",label=label_3,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))%>%
+            addPolygons(data = highlight_2, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#1d91c0",label=label_2,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))%>%
+            addPolygons(data = highlight_1, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#253494",label=label_1,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))
+        return(ny_map)
+    })
+    
+    
+    
+    output$leafmap <- renderLeaflet({
+        leafletmap()
+        
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+})
+
+shinyApp(ui=ui, server = server)

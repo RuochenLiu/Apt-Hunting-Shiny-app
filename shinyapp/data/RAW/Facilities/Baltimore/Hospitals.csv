@@ -1,0 +1,46 @@
+name,type,zipCode,neighborhood,councilDistrict,policeDistrict,Location 1
+John Hopkins Hospital,Hospital,21287,Dunbar-Broadway,13,EASTERN,"600 Wolfe St
+Baltimore, MD
+"
+Maryland General Hospital,Hospital,21201,Mount Vernon,11,CENTRAL,"827 Linden Ave
+Baltimore, MD
+"
+Bon Secours Hospital,Hospital,21223,Penrose/Fayette Street Outreach,9,WESTERN,"2000 Baltimore St
+Baltimore, MD
+"
+Sinai Hospital,Hospital,21215,Levindale,6,NORTHERN,"2401 Belvedere Ave
+Baltimore, MD
+"
+Harbor Hospital Center,Hospital,21225,Middle Branch/Reedbird Parks,10,SOUTHERN,"3001 Hanover St
+Baltimore, MD
+"
+St. Agnes Hospital,Hospital,21229,Violetville,8,SOUTHWESTERN,"900 Caton Ave
+Baltimore, MD
+"
+Union Memorial Hospital,Hospital,21218,Charles Village,14,NORTHERN,"201 University
+Baltimore, MD
+"
+Good Samaritan Hospital,Hospital,21239,Loch Raven,3,NORTHEASTERN,"5601 Lockraven
+Baltimore, MD
+"
+John Hopkins Bayview Medical Center,Hospital,21224,Hopkins Bayview,2,SOUTHEASTERN,"4940 Eastern Ave
+Baltimore, MD
+"
+Mercy Medical Cen.,Hospital,21202,Downtown,11,CENTRAL,"301 St Paul St
+Baltimore, MD
+"
+University of Maryland Medical Center,Hospital,21201,University Of Maryland,11,CENTRAL,"22 Greene St
+Baltimore, MD
+"
+VA Medical Center,Hospital,21201,University Of Maryland,11,CENTRAL,"10 Greene St
+Baltimore, MD
+"
+Kernan Hospital,Hospital,21207,Dickeyville,8,SOUTHWESTERN,"2200 Kernan Dr
+Baltimore, MD
+"
+MOUNT WASHINGTON PEDIATRIC HOSPITAL,Non-Acute Hospital,21209,Mount Washington,5,NORTHERN,"1708 ROGERS AVE
+Baltimore, MD
+"
+UNIVERSITY SPECIALTY HOSPITAL,Non-Acute Hospital,21230,Otterbein,11,SOUTHERN,"611 CHARLES ST
+Baltimore, MD
+"
