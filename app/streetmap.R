@@ -1,9 +1,6 @@
-
-
-
 library(shiny)
 library(shinythemes)
-library(radarchart)
+
 library(ggplot2)
 library(ggmap)
 library(choroplethrZip)
@@ -17,22 +14,16 @@ library(rgeos)
 library(sp)
 require(RColorBrewer)
 library(leaflet)
-library(fmsb)
-library(zipcode)
-library(jpeg)
 suppressPackageStartupMessages(library(tilegramsR))
-downloaddir<-"data"
+setwd("C:/Users/singlevoice/Documents/GitHub/Spr2017-proj2-proj2_grp8/data")
+downloaddir<-getwd()
 
 
-main <- read.csv("data/City Data/Main.csv", as.is = TRUE)
-Job <- read.csv("data/data for plot in City Description/jobs numbers by types.csv")
-job=read.csv('data/data for plot in City Description/job by cities.csv')
-salary=read.csv('data/data for plot in City Description/wage_city.csv')
+main <- read.csv("../data/City Data/main.csv", as.is = TRUE)
 
-
-source("source/compare.R")
-source("source/Score.R")
-nb <- read.csv("data/City Data/NBHD.csv")
+source("../doc/compare.R")
+source("../doc/Score.R")
+nb <- read.csv("../data/City Data/NBHD.csv")
 nb$NB <- as.character(nb$NB)
 
 
@@ -46,7 +37,7 @@ ui=shinyUI(
                  ### 1. INTRODUCTION TAB
                  tabPanel('Introduction',
                           mainPanel(width=12,
-                                    h2('A RShiny app to choose your perfect city in USA'),
+                                    h2('a RShiny app to choose your perfect city in USA'),
                                     br(),
                                     h3('Background'),
                                     p('We notice USA is becoming more and more popular for people all around the word,
@@ -67,28 +58,13 @@ ui=shinyUI(
                                     p('4. Get your result showing the map.'),
                                     p('5. Enjoy!'),
                                     br(),
-                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spr2017-proj2-grp8'))),
+                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spring2017-Proj2-grp8'))),
                                     div(class='footer','Applied Data Science')
                                     
                                     )),
                  
-                 ### 2. CITY DESCRIPTION TAB
-                 tabPanel('City Description',
-                          titlePanel(title=h4('statistic summary',align='center')),
-                          mainPanel(
-                              tabsetPanel(
-                                  tabPanel('Job_type',
-                                           plotOutput('plot_job_type',height=500)),
-                                  tabPanel('Job_city',
-                                           plotOutput('plot_job_city',height=500)),
-                                  tabPanel('Wage',
-                                           plotOutput('plot_wage',height=500)),
-                                  tabPanel('Population',
-                                           plotOutput('plot_population',height=500))
-                              ))),
-                 
                  # heatmap TAB
-                 tabPanel('Heatmap',
+                 tabPanel('heatmap',
                           titlePanel(
                               h2("heatmap of your city"
                               )),
@@ -213,13 +189,12 @@ ui=shinyUI(
                               
                               mainPanel(
                                   tableOutput("view"),
-                                  tabsetPanel(type="pill",id="inTabset",
-                                              tabPanel("leafletmap",
-                                                       leafletOutput("leafletmap",height=800)
+                                  tabsetPanel(type="pill",
+                                              tabPanel("map",
+                                                       leafletOutput("leafmap",height=800)
                                               ),
                                               tabPanel("streetmap",
-                                                       leafletOutput("streetmap",height=500)
-                                              )
+                                                       leafletOutput("streetmap",height=800))
                                              
                                               
                                   )
@@ -243,88 +218,14 @@ ui=shinyUI(
                                     p(strong('Mengchen Li'),':ml3890@columbia.edu'),
                                     p(strong('Yuan Mei'),':ym2583@columbia.edu'),
                                     br(),
-                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spr2017-proj2-grp8')))
+                                    p(em(a("Github Link",href='https://github.com/TZstatsADS/Spring2017-Proj2-grp8')))
                                     
                           ))
                  
       ))
 )
 
-server=shinyServer(function(input, output,session){
-    
-    ### 2. CITY DESCRIPTION TAB
-    
-    ## job by type
-    
-    
-    Job=data.frame(count=Job$Total,category=Job$job.types)
-    Job$fraction=Job$count/sum(Job$count) 
-    Job=Job[order(Job$fraction),]
-    Job$ymax=cumsum(Job$fraction)
-    Job$ymin=c(0,head(Job$fraction,n=-1))
-    
-    output$plot_job_type=renderPlot({
-        ggplot(Job, aes(fill=category,ymax=ymax,ymin=ymin,xmax=10,xmin=3))+
-            geom_rect()+
-            coord_polar(theta='y')+
-            #xlim(c(0,10))+
-            theme(panel.grid=element_blank())+
-            theme(axis.text = element_blank())+
-            theme(axis.ticks = element_blank())+
-            annotate('text',x=0,y=0,label='Jobs by type')+
-            labs(title='')
-    })
-    
-    ## job by city
-    output$plot_job_city=renderPlot({
-        ggplot(job,aes(x=City, fill=City, y=Total))+
-            geom_bar(stat = 'identity')+
-            scale_fill_hue(c=40)+
-            coord_flip()
-    })
-    
-    ## wage
-    City=c(rep('NY',69),rep('Chicago',58),rep('Austin',72),rep('LA',68), rep('SF',37))
-    value=c(salary$NY[1:69],salary$Chicago[1:58],salary$Austin[1:72],salary$LA[1:68],salary$SF[1:37])
-    salary_city=data.frame(City,value)
-    
-    salary_mean=aggregate(salary_city$value,by=list(salary_city$City),mean); 
-    colnames(salary_mean)=c('city','mean')
-    salary_sd=aggregate(salary_city$value,by=list(salary_city$City),sd);
-    colnames(salary_sd)=c('city','sd')
-    salary=merge(salary_mean,salary_sd, by.x=1, by.y=1)
-    
-    output$plot_wage=renderPlot({
-        ggplot(salary_city)+
-            geom_point(aes(x=City, y=value), colour=rgb(0.8,0.7,0.1,0.4),size=5)+
-            geom_point(data = salary,aes(x=city, y=mean),colour = rgb(0.6,0.5,0.4,0.7) , size = 8)+
-            geom_errorbar(data=salary,aes(x=city, y=sd,ymin=mean-sd,
-                                          ymax=mean+sd),colour = rgb(0.4,0.8,0.2,0.4) , width = 0.7 , size=1.5)
-    })
-    
-    ## Population
-    # Population
-    population=c(7690221,	1393765,	694347,	5930283	,849762)
-    population=data.frame(t(population))
-    colnames(population)=c('NYC','Chicago','LA','SF','Austin')
-    
-    max=max(population)
-    min=min(population)
-    population=rbind(rep(max,5),rep(min,5),population)
-    
-    output$plot_population=renderPlot({
-        radarchart( population, axistype=1, 
-                    #custom polygon
-                    pcol=rgb(0.2,0.5,0.5,0.9), pfcol=rgb(0.2,0.5,0.5,0.5), plwd=4 , 
-                    #custom the grid
-                    cglcol="grey", cglty=1, axislabcol="grey", caxislabels=seq(min,max,5), cglwd=0.8,
-                    #custom labels
-                    vlcex=0.8,title='population for in cities')
-    })
-    
-    
-    #heatmap
-    
+server=shinyServer(function(input, output){
     data("zip.regions")
     map <- reactive({
         if (input$asp == 1){
@@ -341,7 +242,6 @@ server=shinyServer(function(input, output,session){
                                aes(x = Lon, y = Lat, fill = ..level.., alpha = ..level..), size = 0.01, 
                                bins = 16, geom = "polygon") + scale_fill_gradient(low = "green", high = "red") + 
                 scale_alpha(range = c(0, 0.3), guide = FALSE)
-            
             
         }
         
@@ -361,7 +261,7 @@ server=shinyServer(function(input, output,session){
         }
         
         if(input$asp == 3){
-            lib <- read.csv(paste("data/City Raw/",input$city, "/Library.csv", sep = ""))
+            lib <- read.csv(paste("~/GitHub/Spr2017-proj2-proj2_grp8/data/City Raw/",input$city, "/Library.csv", sep = ""))
             lib=
                 lib%>%
                 filter(lib$ZIP>0)%>%
@@ -379,7 +279,7 @@ server=shinyServer(function(input, output,session){
             
         }
         if (input$asp == 4){
-            res <- read.csv(paste("data/City Raw/",input$city, "/Restaurant.csv", sep = ""))
+            res <- read.csv(paste("~/GitHub/Spr2017-proj2-proj2_grp8/data/City Raw/",input$city, "/Restaurant.csv", sep = ""))
             res=
                 res%>%
                 filter(res$ZIP>0)%>%
@@ -396,7 +296,7 @@ server=shinyServer(function(input, output,session){
                                   zip_zoom = res$region[res$region %in% zip.regions$region])
         }
         if (input$asp == 5){
-            res <- read.csv(paste("data/City Raw/",input$city, "/Park.csv", sep = ""))
+            res <- read.csv(paste("~/GitHub/Spr2017-proj2-proj2_grp8/data/City Raw/",input$city, "/Park.csv", sep = ""))
             res=
                 res%>%
                 filter(res$ZIP>0)%>%
@@ -413,7 +313,7 @@ server=shinyServer(function(input, output,session){
                                   zip_zoom = res$region[res$region %in% zip.regions$region])
         }
         if (input$asp == 6){
-            res <- read.csv(paste("data/City Raw/",input$city, "/Health.csv", sep = ""))
+            res <- read.csv(paste("~/GitHub/Spr2017-proj2-proj2_grp8/data/City Raw/",input$city, "/Health.csv", sep = ""))
             res=
                 res%>%
                 filter(res$ZIP>0)%>%
@@ -585,28 +485,10 @@ server=shinyServer(function(input, output,session){
     })
     
     
-    #get zipcode latitude
-     data(zipcode)
-    trans_ziplat<-function(zip,data=zipcode){
-        zip=zip[!is.na(zip)]
-        num<-length(zip)
-        lat<-NULL
-        lng<-NULL
-        if(!length(zip)==0){
-            for(i in 1:num){
-                lat[i]<-data[which(data$zip==zip[[i]][1]),4]
-                lng[i]<-data[which(data$zip==zip[[i]][1]),5]
-            }
-            result=data.frame(Lat=lat,Lng=lng)}
-        else{result=NA}
-        return(result)
-    }
-    
-    
     # Leaflet map
     
     crsmerc<-CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
-    
+    downloaddir<-getwd()
     leafletmap <- reactive({
         
         c <- paste('zipcode_',input$target_city, sep = "")
@@ -621,59 +503,65 @@ server=shinyServer(function(input, output,session){
         highlight_3 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[3]]))
         highlight_2 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[2]]))
         highlight_1 <- subset(ny_transformed, ny_transformed$ZIPCODE %in% factor(zip_code()[[1]]))
-        c_label=ny_transformed$ZIPCODE
-        label_1<-top3()$Neighborhood[1]
-        label_2<-top3()$Neighborhood[2]
-        label_3<-top3()$Neighborhood[3]
+        label_1 <-  top3()$Neighborhood[1]
+        label_2 <- top3()$Neighborhood[2]
+        label_3 <- top3()$Neighborhood[3]
         
-        if(!is.na(trans_ziplat(zip=zip_code()))){
-            ny_map<- leaflet(ny_transformed) %>%
-                addTiles(options=providerTileOptions(noWrap=T))%>%
-                addProviderTiles("Stamen.Watercolor")%>%
-                addPolygons(options = pathOptions(),opacity=0.8,weight=1,color="#ffffb2",highlightOptions = highlightOptions(color="#006d2c",opacity = 0.5, weight = 2, fillOpacity = 0.5,
-                                                                                                                             bringToFront = TRUE, sendToBack = TRUE),label=c_label) %>%
-                addPolygons(data = highlight_3, options = pathOptions(),opacity=0.5,weight=1,color="#006d2c",label=label_3)%>%
-                addPolygons(data = highlight_2, options = pathOptions(),opacity=0.5,weight=1,color="#253494",label=label_2)%>%
-                addPolygons(data = highlight_1, options = pathOptions(),opacity=0.5,weight=1,color="#cb181d",label=label_1)%>%
-                setView(lat=trans_ziplat(zip=zip_code())$Lat[1],lng=trans_ziplat(zip=zip_code())$Lng[1],zoom=11)%>%
-                addMarkers(lat=trans_ziplat(zip=zip_code())$Lat,trans_ziplat(zip=zip_code())$Lng)
-            
-            
-            return(ny_map)
-        }
-        else{
-            ny_map<- leaflet(ny_transformed) %>%
-                addTiles(options=providerTileOptions(noWrap=T))%>%
-                addProviderTiles("Stamen.Watercolor")%>%
-                addPolygons(options = pathOptions(),opacity=0.8,weight=1,color="#ffffb2",highlightOptions = highlightOptions(color="#006d2c",opacity = 0.5, weight = 2, fillOpacity = 0.5,
-                                                                                                                             bringToFront = TRUE, sendToBack = TRUE),label=c_label)
-            return(ny_map)
-        }
+        
+        
+        ny_map<- leaflet(ny_transformed) %>%
+            addProviderTiles("Stamen.Toner") %>%
+            addPolygons(options = pathOptions(),opacity=0.8,weight=1,color="#ffffb2")%>%
+            addPolygons(data = highlight_3, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#7fcdbb",label=label_3,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))%>%
+            addPolygons(data = highlight_2, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#1d91c0",label=label_2,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))%>%
+            addPolygons(data = highlight_1, options = pathOptions(),fillOpacity = 0.7,opacity=0.8,weight=1,color="#253494",label=label_1,labelOptions = labelOptions(clickable=T,style = list("color" = "black",
+                                                                                                                                                                              "font-family" = "serif",
+                                                                                                                                                                              "font-style" = "italic",
+                                                                                                                                                                              "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                                                                                                                                              "font-size" = "12px",
+                                                                                                                                                                              "border-color" = "rgba(0,0,0,0.5)")))
+        return(ny_map)
     })
     
-    output$leafletmap <- renderLeaflet({
+    
+    
+    output$leafmap <- renderLeaflet({
         leafletmap()
+        
     })
     
     
-    streetmap<-reactive({
-        streetmap<-leaflet()%>%
-            addTiles(options=providerTileOptions(noWrap=TRUE))
-        return(streetmap)
+    
+    
+    
+    
+    street <- eventReactive(input$map_click,{
+        area_click<-input$map_click
+        leaflet()%>%
+            addTiles() %>%
+            setView(lat=area_click$lat,lng=area_click$lng,zoom=15)
     })
+   
     output$streetmap<-renderLeaflet({
-        streetmap()
+        street()
     })
     
-    observeEvent(input$leafletmap_shape_click,{
-        click<-input$leafletmap_shape_click
-        updateTabsetPanel(session, inputId="inTabset", selected ="streetmap" )
-        output$streetmap<-renderLeaflet({
-            leaflet(streetmap)%>%
-                addTiles(options=providerTileOptions(noWrap=TRUE))%>%
-                setView(lng = click$lng, lat = click$lat, zoom = 16)
-        })
-    })
+    
+    
+    
+    
+    
+    
 })
 
-shinyApp(ui=ui, server = server)    
+shinyApp(ui=ui, server = server)
