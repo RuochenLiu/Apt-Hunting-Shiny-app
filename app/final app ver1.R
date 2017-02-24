@@ -10,6 +10,16 @@ library(dplyr)
 library(DT)
 library(lubridate)
 
+main <- read.csv("../data/City Data/main.csv", as.is = TRUE)
+
+source("../doc/compare.R")
+source("../doc/Score.R")
+nb <- read.csv("../data/City Data/NBHD.csv")
+main <- read.csv("../data/City Data/Main.csv")
+nb$NB <- as.character(nb$NB)
+
+
+
 ui=shinyUI(
   
   div(id='canvas',
@@ -79,6 +89,98 @@ ui=shinyUI(
                               
                               mainPanel(
                                   plotOutput("heatmap",width = "800px" , height = "800px")
+                              )
+                          )),
+                 
+                 # 4. FIND YOUR NEIGHBORHOOD TAB
+                 tabPanel('Find Your Neighborhood',
+                          titlePanel(
+                              h2("Reallocating to a new city?", 
+                                 br(), 
+                                 "Find the neighborhood that's perfect for you")),
+                          
+                          sidebarLayout(
+                              sidebarPanel(
+                                  
+                                  
+                                  selectInput("target_city", 
+                                              label = "Where are you reallocating to?",
+                                              choices = c("New York City" =  "NYC",
+                                                          "Los Angeles" = "LA",
+                                                          "San Francisco" = "SF",
+                                                          "Austin" = "Austin",
+                                                          "Chicago" = "Chicago")
+                                  ),
+                                  br(),
+                                  p(h4(strong("Happy with your current neighborhood? Let's find a similar one in your target city"))),
+                                  selectInput("current_city", 
+                                              label = "Current city",
+                                              choices = c("Not Selected" = "NA",
+                                                          "New York City" = "NY",
+                                                          "Los Angeles" = "LA",
+                                                          "San Francisco" = "SF",
+                                                          "Austin" = "Austin",
+                                                          "Chicago" = "Chicago")
+                                  ),
+                                  br(),
+                                  selectInput("current_neighborhood", 
+                                              label = "Current neighborhood",
+                                              #choices = c("Not Selected" = "NA", "UW" = "Upper West Side")
+                                              choices = c("Not Selected" = "NA", main[,2])
+                                  ),
+                                  br(),
+                                  selectInput("current_br", 
+                                              label = "Number of bedrooms of your current residence",
+                                              choices = c("Studio" = 0,
+                                                          "1b" = 1,
+                                                          "2b" = 2,
+                                                          "3b" = 3,
+                                                          "4b" = 4)
+                                  ),
+                                  br(),
+                                  p(h4(strong("Or, adjust your criteria manually"))),
+                                  selectInput("manual_br", 
+                                              label = "Number of bedrooms",
+                                              choices = c("Studio" = 0,
+                                                          "1b" = 1,
+                                                          "2b" = 2,
+                                                          "3b" = 3,
+                                                          "4b" = 4)
+                                  ),
+                                  br(),
+                                  sliderInput("manual_rent", 
+                                              label = "Rent range", 
+                                              min = 850, 
+                                              max = 7900, 
+                                              value = c(1200, 2000), 
+                                              step = 10, 
+                                              round = TRUE),
+                                  br(),
+                                  selectInput("manual_density", 
+                                              label = "Population density",
+                                              choices = c("Crowded" = 3,
+                                                          "Medium" = 2,
+                                                          "Sparse" = 1)
+                                  ),
+                                  br(),
+                                  p(h4(strong("Other factors to weigh in?"))),
+                                  checkboxInput("health", 
+                                                label = "Healthcare facilities", 
+                                                value = FALSE),
+                                  checkboxInput("libraries", 
+                                                label = "Libraries", 
+                                                value = FALSE),
+                                  checkboxInput("parks", 
+                                                label = "Parks", 
+                                                value = FALSE),
+                                  checkboxInput("restaurants", 
+                                                label = "Restaurants", 
+                                                value = FALSE)
+                              ),
+                              
+                              
+                              mainPanel(
+                                  tableOutput("view")
                               )
                           )),
       
@@ -227,6 +329,149 @@ server=shinyServer(function(input, output){
     
     
     )
+    
+    # Get target city.
+    
+    top3 <- reactive({
+        city <- main[main$City == input$target_city,]
+        
+        # If user chooses his current neighbirhood.
+        
+        if(input$current_neighborhood != "NA"){
+            st <- main[main$Neighborhood == input$current_neighborhood, ]
+            top <- comp(city, st[1,], as.numeric(input$current_br))
+        }
+        
+        # If not
+        
+        else{
+            
+            br <- as.numeric(input$manual_br) + 9
+            up <- as.numeric(input$manual_rent[2])
+            down <- as.numeric(input$manual_rent[1])
+            den <- as.numeric(input$manual_density)
+            if(den == 3){
+                den0 <- 150
+                den1 <- 500
+            }
+            if(den == 2){
+                den0 <- 50
+                den1 <- 150
+            }
+            if(den == 1){
+                den0 <- 0
+                den1 <- 50
+            }
+            
+            # Check rent range.
+            
+            dest <- city[city[,br] <= up & city[,br] >= down & city$density < den1 & city$density >den0, ]
+            
+            
+            if(nrow(dest) == 0){
+                top <- NA
+            }
+            else {
+                if(nrow(dest) < 3 & nrow(dest) >0){
+                    top <- dest
+                }
+                else{
+                    p <- as.numeric(input$parks)
+                    r <- as.numeric(input$restaurants)
+                    h <- as.numeric(input$health)
+                    l <- as.numeric(input$libraries)
+                    top <- score(dest, p, h, l, r) 
+                }
+            }
+        }
+        
+        
+        
+        if(is.na(top) == FALSE){
+            if(top$density[1] >150){
+                top$density <- rep("Crowded", nrow(top))
+            }
+            else{
+                if(top$density[1] < 50){
+                    top$density <- rep("Sparse", nrow(top))
+                }
+                else{
+                    top$density <- rep("Medium", nrow(top))
+                }
+            }
+        }
+        
+        if(is.na(top) == FALSE){
+            colnames(top) <- c("City","Neighborhood","Park","Healthcare","Library","Restaurant","Population","Area","Rent-Studio","Rent-1BR","Rent-2BR","Rent-3BR","Rent-4BR","Pop-Density")
+        }
+        
+        return(top)
+        
+    })
+    
+    
+    
+    zip_code <- reactive({
+        
+        if(is.na(top3()) == FALSE){
+            
+            #ZipCode List
+            zip1 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[1]]), ", ")
+            zip2 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[2]]), ", ")
+            zip3 <- strsplit(as.character(nb$ZipCode[nb$NB == top3()$Neighborhood[3]]), ", ")
+            
+            if(length(zip1) == 1){
+                zip1 <- zip1[[1]]
+            }
+            else{
+                zip1 <- NA
+            }
+            if(length(zip2) == 1){
+                zip2 <- zip2[[1]]
+            }
+            else{
+                zip2 <- NA
+            }
+            if(length(zip3) == 1){
+                zip3 <- zip3[[1]]
+            }
+            else{
+                zip3 <- NA
+            }
+            
+            z <- list(zip1, zip2, zip3)
+        }
+        
+        else{
+            zip1 <- NA
+            zip2 <- NA
+            zip3 <- NA
+            z <- list(zip1,zip2,zip3)
+        }
+        
+        return(z) # Zip Code List, Length=3
+    })
+    
+    N <- "Sorry! There is no result." 
+    
+    
+    
+    # Table Results
+    
+    output$view <- renderTable({
+        if(is.na(top3()) == FALSE){
+            head(top3())
+        }
+        else{
+            head(N)
+        }
+    })
+    
+    
+    
+    
+    
+    
 })
 
 shinyApp(ui=ui, server = server)
