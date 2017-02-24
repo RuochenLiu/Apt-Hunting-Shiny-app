@@ -1,6 +1,6 @@
 # Project 2: Open Data App - an RShiny app development project
 
-### [Perfect City Go](https://guanzy.shinyapps.io/trafficcare2/)
+### [Perfect City Go](https://bpeng93.shinyapps.io/shinyapp/)
 
 ![screenshot](doc/screenshot2.png)
 
